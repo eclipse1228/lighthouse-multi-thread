@@ -1,0 +1,19 @@
+{
+  "name": "ecoweb-data-crawling",
+  "version": "1.0.0",
+  "description": "웹사이트 탄소배출량 측정을 위한 Lighthouse 데이터 수집 프로그램",
+  "main": "index.ts",
+  "type": "module",
+  "scripts": {
+    "start": "node dist/index.js",
+    "build": "tsc"
+  },
+  "dependencies": {
+    "@types/node": "^20.0.0",
+    "lighthouse": "^12.3.0",
+    "mongodb": "^6.0.0",
+    "puppeteer": "^24.2.0",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.0.0"
+  }
+}

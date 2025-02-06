@@ -1,0 +1,2643 @@
+{
+    "lighthouseVersion": "12.2.1",
+    "requestedUrl": "https://ets.krx.co.kr/main/main.jsp",
+    "mainDocumentUrl": "https://ets.krx.co.kr/main/main.jsp",
+    "finalDisplayedUrl": "https://ets.krx.co.kr/main/main.jsp",
+    "finalUrl": "https://ets.krx.co.kr/main/main.jsp",
+    "fetchTime": "2024-11-29T08:20:29.262Z",
+    "gatherMode": "navigation",
+    "runWarnings": [],
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/131.0.0.0 Safari/537.36",
+    "audits": {
+      "network-requests": {
+        "id": "network-requests",
+        "title": "Network Requests",
+        "description": "Lists the network requests that were made during page load.",
+        "score": 1,
+        "scoreDisplayMode": "informative",
+        "details": {
+          "type": "table",
+          "headings": [
+            {
+              "key": "url",
+              "valueType": "url",
+              "label": "URL"
+            },
+            {
+              "key": "protocol",
+              "valueType": "text",
+              "label": "Protocol"
+            },
+            {
+              "key": "networkRequestTime",
+              "valueType": "ms",
+              "granularity": 1,
+              "label": "Network Request Time"
+            },
+            {
+              "key": "networkEndTime",
+              "valueType": "ms",
+              "granularity": 1,
+              "label": "Network End Time"
+            },
+            {
+              "key": "transferSize",
+              "valueType": "bytes",
+              "displayUnit": "kb",
+              "granularity": 1,
+              "label": "Transfer Size"
+            },
+            {
+              "key": "resourceSize",
+              "valueType": "bytes",
+              "displayUnit": "kb",
+              "granularity": 1,
+              "label": "Resource Size"
+            },
+            {
+              "key": "statusCode",
+              "valueType": "text",
+              "label": "Status Code"
+            },
+            {
+              "key": "mimeType",
+              "valueType": "text",
+              "label": "MIME Type"
+            },
+            {
+              "key": "resourceType",
+              "valueType": "text",
+              "label": "Resource Type"
+            }
+          ],
+          "items": [
+            {
+              "url": "https://ets.krx.co.kr/main/main.jsp",
+              "sessionTargetType": "page",
+              "protocol": "h2",
+              "rendererStartTime": 0,
+              "networkRequestTime": 2.7890000343322754,
+              "networkEndTime": 552.9630000591278,
+              "finished": true,
+              "transferSize": 6457,
+              "resourceSize": 35031,
+              "statusCode": 200,
+              "mimeType": "text/html",
+              "resourceType": "Document",
+              "priority": "VeryHigh",
+              "experimentalFromMainFrame": true,
+              "entity": "krx.co.kr"
+            },
+            {
+              "url": "https://ets.krx.co.kr/WEB-APP/jquery/jquery-ui-1.10.4.custom.min.css",
+              "sessionTargetType": "page",
+              "protocol": "h2",
+              "rendererStartTime": 569.1020001173019,
+              "networkRequestTime": 570.9869999885559,
+              "networkEndTime": 669.886999964714,
+              "finished": true,
+              "transferSize": 5318,
+              "resourceSize": 25920,
+              "statusCode": 200,
+              "mimeType": "text/css",
+              "resourceType": "Stylesheet",
+              "priority": "VeryHigh",
+              "experimentalFromMainFrame": true,
+              "entity": "krx.co.kr"
+            },
+            {
+              "url": "https://ets.krx.co.kr/res/pc/css/default.css",
+              "sessionTargetType": "page",
+              "protocol": "h2",
+              "rendererStartTime": 569.9960000514984,
+              "networkRequestTime": 571.670000076294,
+              "networkEndTime": 670.4850000143051,
+              "finished": true,
+              "transferSize": 775,
+              "resourceSize": 1169,
+              "statusCode": 200,
+              "mimeType": "text/css",
+              "resourceType": "Stylesheet",
+              "priority": "VeryHigh",
+              "experimentalFromMainFrame": true,
+              "entity": "krx.co.kr"
+            },
+            {
+              "url": "https://ets.krx.co.kr/templets/pc/css/templet.css",
+              "sessionTargetType": "page",
+              "protocol": "h2",
+              "rendererStartTime": 570.3100000619888,
+              "networkRequestTime": 572.3400000333786,
+              "networkEndTime": 671.0069999694824,
+              "finished": true,
+              "transferSize": 6676,
+              "resourceSize": 49921,
+              "statusCode": 200,
+              "mimeType": "text/css",
+              "resourceType": "Stylesheet",
+              "priority": "VeryHigh",
+              "experimentalFromMainFrame": true,
+              "entity": "krx.co.kr"
+            },
+            {
+              "url": "https://ets.krx.co.kr/templets/pc/css/gnb-gap.css",
+              "sessionTargetType": "page",
+              "protocol": "h2",
+              "rendererStartTime": 570.8010001182556,
+              "networkRequestTime": 572.7370001077652,
+              "networkEndTime": 673.4509999752045,
+              "finished": true,
+              "transferSize": 240,
+              "resourceSize": 78,
+              "statusCode": 200,
+              "mimeType": "text/css",
+              "resourceType": "Stylesheet",
+              "priority": "VeryHigh",
+              "experimentalFromMainFrame": true,
+              "entity": "krx.co.kr"
+            },
+            {
+              "url": "https://ets.krx.co.kr/res/pc/css/func.css",
+              "sessionTargetType": "page",
+              "protocol": "h2",
+              "rendererStartTime": 571.0870000123978,
+              "networkRequestTime": 573.1520000696182,
+              "networkEndTime": 674.0140000581741,
+              "finished": true,
+              "transferSize": 6278,
+              "resourceSize": 57147,
+              "statusCode": 200,
+              "mimeType": "text/css",
+              "resourceType": "Stylesheet",
+              "priority": "VeryHigh",
+              "experimentalFromMainFrame": true,
+              "entity": "krx.co.kr"
+            },
+            {
+              "url": "https://ets.krx.co.kr/res/pc/css/design.css",
+              "sessionTargetType": "page",
+              "protocol": "h2",
+              "rendererStartTime": 571.3970000743866,
+              "networkRequestTime": 573.5630000829697,
+              "networkEndTime": 678.586000084877,
+              "finished": true,
+              "transferSize": 13453,
+              "resourceSize": 99665,
+              "statusCode": 200,
+              "mimeType": "text/css",
+              "resourceType": "Stylesheet",
+              "priority": "VeryHigh",
+              "experimentalFromMainFrame": true,
+              "entity": "krx.co.kr"
+            },
+            {
+              "url": "https://ets.krx.co.kr/res/pc/css/contents.css",
+              "sessionTargetType": "page",
+              "protocol": "h2",
+              "rendererStartTime": 571.6660000085831,
+              "networkRequestTime": 574.0600000619888,
+              "networkEndTime": 818.8100000619888,
+              "finished": true,
+              "transferSize": 33782,
+              "resourceSize": 255548,
+              "statusCode": 200,
+              "mimeType": "text/css",
+              "resourceType": "Stylesheet",
+              "priority": "VeryHigh",
+              "experimentalFromMainFrame": true,
+              "entity": "krx.co.kr"
+            },
+            {
+              "url": "https://ets.krx.co.kr/res/pc/css/ets_contents.css",
+              "sessionTargetType": "page",
+              "protocol": "h2",
+              "rendererStartTime": 572.029000043869,
+              "networkRequestTime": 574.8379999399185,
+              "networkEndTime": 705.972000002861,
+              "finished": true,
+              "transferSize": 4453,
+              "resourceSize": 25752,
+              "statusCode": 200,
+              "mimeType": "text/css",
+              "resourceType": "Stylesheet",
+              "priority": "VeryHigh",
+              "experimentalFromMainFrame": true,
+              "entity": "krx.co.kr"
+            },
+            {
+              "url": "https://ets.krx.co.kr/res/pc/css/calendar.css",
+              "sessionTargetType": "page",
+              "protocol": "h2",
+              "rendererStartTime": 572.4750000238419,
+              "networkRequestTime": 575.3420000076294,
+              "networkEndTime": 734.6890000104904,
+              "finished": true,
+              "transferSize": 1246,
+              "resourceSize": 4097,
+              "statusCode": 200,
+              "mimeType": "text/css",
+              "resourceType": "Stylesheet",
+              "priority": "VeryHigh",
+              "experimentalFromMainFrame": true,
+              "entity": "krx.co.kr"
+            },
+            {
+              "url": "https://ets.krx.co.kr/WEB-APP/webponent/grid/css/webponent.grid.css",
+              "sessionTargetType": "page",
+              "protocol": "h2",
+              "rendererStartTime": 572.8190001249313,
+              "networkRequestTime": 575.7800000905991,
+              "networkEndTime": 712.0249999761581,
+              "finished": true,
+              "transferSize": 1970,
+              "resourceSize": 6714,
+              "statusCode": 200,
+              "mimeType": "text/css",
+              "resourceType": "Stylesheet",
+              "priority": "VeryHigh",
+              "experimentalFromMainFrame": true,
+              "entity": "krx.co.kr"
+            },
+            {
+              "url": "https://ets.krx.co.kr/WEB-APP/webponent/grid/css/webponent.grid.flat.css",
+              "sessionTargetType": "page",
+              "protocol": "h2",
+              "rendererStartTime": 573.055999994278,
+              "networkRequestTime": 576.2189999818802,
+              "networkEndTime": 713.2130000591278,
+              "finished": true,
+              "transferSize": 2289,
+              "resourceSize": 9700,
+              "statusCode": 200,
+              "mimeType": "text/css",
+              "resourceType": "Stylesheet",
+              "priority": "VeryHigh",
+              "experimentalFromMainFrame": true,
+              "entity": "krx.co.kr"
+            },
+            {
+              "url": "https://ets.krx.co.kr/WEB-APP/webponent/grid/css/webponent.pagingUI.css",
+              "sessionTargetType": "page",
+              "protocol": "h2",
+              "rendererStartTime": 573.2979999780655,
+              "networkRequestTime": 576.6240000724792,
+              "networkEndTime": 713.9240000247955,
+              "finished": true,
+              "transferSize": 710,
+              "resourceSize": 1788,
+              "statusCode": 200,
+              "mimeType": "text/css",
+              "resourceType": "Stylesheet",
+              "priority": "VeryHigh",
+              "experimentalFromMainFrame": true,
+              "entity": "krx.co.kr"
+            },
+            {
+              "url": "https://ets.krx.co.kr/WEB-APP/webponent/grid/css/webponent.Tree.css",
+              "sessionTargetType": "page",
+              "protocol": "h2",
+              "rendererStartTime": 573.5070000886917,
+              "networkRequestTime": 577.4450000524521,
+              "networkEndTime": 714.9300000667572,
+              "finished": true,
+              "transferSize": 3486,
+              "resourceSize": 8169,
+              "statusCode": 200,
+              "mimeType": "text/css",
+              "resourceType": "Stylesheet",
+              "priority": "VeryHigh",
+              "experimentalFromMainFrame": true,
+              "entity": "krx.co.kr"
+            },
+            {
+              "url": "https://ets.krx.co.kr/res/pc/css/grid.css",
+              "sessionTargetType": "page",
+              "protocol": "h2",
+              "rendererStartTime": 573.8430000543594,
+              "networkRequestTime": 578.2519999742508,
+              "networkEndTime": 716.3079999685287,
+              "finished": true,
+              "transferSize": 2108,
+              "resourceSize": 8169,
+              "statusCode": 200,
+              "mimeType": "text/css",
+              "resourceType": "Stylesheet",
+              "priority": "VeryHigh",
+              "experimentalFromMainFrame": true,
+              "entity": "krx.co.kr"
+            },
+            {
+              "url": "https://ets.krx.co.kr/main/css/main.css?v=202403283",
+              "sessionTargetType": "page",
+              "protocol": "h2",
+              "rendererStartTime": 574.1620000600815,
+              "networkRequestTime": 578.6749999523163,
+              "networkEndTime": 716.8170000314713,
+              "finished": true,
+              "transferSize": 4010,
+              "resourceSize": 26195,
+              "statusCode": 200,
+              "mimeType": "text/css",
+              "resourceType": "Stylesheet",
+              "priority": "VeryHigh",
+              "experimentalFromMainFrame": true,
+              "entity": "krx.co.kr"
+            },
+            {
+              "url": "https://ets.krx.co.kr/WEB-APP/jquery/jquery.min.js",
+              "sessionTargetType": "page",
+              "protocol": "h2",
+              "rendererStartTime": 574.5610001087189,
+              "networkRequestTime": 579.0729999542236,
+              "networkEndTime": 780.9380000829697,
+              "finished": true,
+              "transferSize": 33496,
+              "resourceSize": 95957,
+              "statusCode": 200,
+              "mimeType": "application/javascript",
+              "resourceType": "Script",
+              "priority": "High",
+              "experimentalFromMainFrame": true,
+              "entity": "krx.co.kr"
+            },
+            {
+              "url": "https://ets.krx.co.kr/WEB-APP/jquery/jquery-ui.min.js",
+              "sessionTargetType": "page",
+              "protocol": "h2",
+              "rendererStartTime": 574.9190000295639,
+              "networkRequestTime": 579.4420000314713,
+              "networkEndTime": 813.8040000200272,
+              "finished": true,
+              "transferSize": 64054,
+              "resourceSize": 240427,
+              "statusCode": 200,
+              "mimeType": "application/javascript",
+              "resourceType": "Script",
+              "priority": "High",
+              "experimentalFromMainFrame": true,
+              "entity": "krx.co.kr"
+            },
+            {
+              "url": "https://ets.krx.co.kr/WEB-APP/jquery/js.cookie.js",
+              "sessionTargetType": "page",
+              "protocol": "h2",
+              "rendererStartTime": 575.2300000190735,
+              "networkRequestTime": 579.8340001106262,
+              "networkEndTime": 742.8170000314713,
+              "finished": true,
+              "transferSize": 1506,
+              "resourceSize": 3285,
+              "statusCode": 200,
+              "mimeType": "application/javascript",
+              "resourceType": "Script",
+              "priority": "High",
+              "experimentalFromMainFrame": true,
+              "entity": "krx.co.kr"
+            },
+            {
+              "url": "https://ets.krx.co.kr/WEB-APP/jquery/jquery.scrollTo.min.js",
+              "sessionTargetType": "page",
+              "protocol": "h2",
+              "rendererStartTime": 575.5299999713898,
+              "networkRequestTime": 580.2359999418259,
+              "networkEndTime": 744.7620000839233,
+              "finished": true,
+              "transferSize": 1472,
+              "resourceSize": 2451,
+              "statusCode": 200,
+              "mimeType": "application/javascript",
+              "resourceType": "Script",
+              "priority": "High",
+              "experimentalFromMainFrame": true,
+              "entity": "krx.co.kr"
+            },
+            {
+              "url": "https://ets.krx.co.kr/WEB-APP/jquery/jquery.ui.touch-punch.min.js",
+              "sessionTargetType": "page",
+              "protocol": "h2",
+              "rendererStartTime": 575.9099999666214,
+              "networkRequestTime": 580.5670000314713,
+              "networkEndTime": 745.5210000276566,
+              "finished": true,
+              "transferSize": 757,
+              "resourceSize": 1301,
+              "statusCode": 200,
+              "mimeType": "application/javascript",
+              "resourceType": "Script",
+              "priority": "High",
+              "experimentalFromMainFrame": true,
+              "entity": "krx.co.kr"
+            },
+            {
+              "url": "https://ets.krx.co.kr/templets/pc/js/templet.js",
+              "sessionTargetType": "page",
+              "protocol": "h2",
+              "rendererStartTime": 576.1910001039505,
+              "networkRequestTime": 580.9739999771118,
+              "networkEndTime": 747.5160000324249,
+              "finished": true,
+              "transferSize": 1282,
+              "resourceSize": 5659,
+              "statusCode": 200,
+              "mimeType": "application/javascript",
+              "resourceType": "Script",
+              "priority": "High",
+              "experimentalFromMainFrame": true,
+              "entity": "krx.co.kr"
+            },
+            {
+              "url": "https://ets.krx.co.kr/res/pc/js/design.js",
+              "sessionTargetType": "page",
+              "protocol": "h2",
+              "rendererStartTime": 576.4570001363754,
+              "networkRequestTime": 581.3810000419617,
+              "networkEndTime": 748.6849999427795,
+              "finished": true,
+              "transferSize": 6455,
+              "resourceSize": 23998,
+              "statusCode": 200,
+              "mimeType": "application/javascript",
+              "resourceType": "Script",
+              "priority": "High",
+              "experimentalFromMainFrame": true,
+              "entity": "krx.co.kr"
+            },
+            {
+              "url": "https://ets.krx.co.kr/res/pc/js/func.js",
+              "sessionTargetType": "page",
+              "protocol": "h2",
+              "rendererStartTime": 576.7720000743866,
+              "networkRequestTime": 581.8450000286102,
+              "networkEndTime": 785.6060000658035,
+              "finished": true,
+              "transferSize": 18694,
+              "resourceSize": 81566,
+              "statusCode": 200,
+              "mimeType": "application/javascript",
+              "resourceType": "Script",
+              "priority": "High",
+              "experimentalFromMainFrame": true,
+              "entity": "krx.co.kr"
+            },
+            {
+              "url": "https://ets.krx.co.kr/WEB-APP/calendar/calendar.js",
+              "sessionTargetType": "page",
+              "protocol": "h2",
+              "rendererStartTime": 577.3600001335144,
+              "networkRequestTime": 582.4390000104904,
+              "networkEndTime": 806.364000082016,
+              "finished": true,
+              "transferSize": 5303,
+              "resourceSize": 22130,
+              "statusCode": 200,
+              "mimeType": "application/javascript",
+              "resourceType": "Script",
+              "priority": "High",
+              "experimentalFromMainFrame": true,
+              "entity": "krx.co.kr"
+            },
+            {
+              "url": "https://ets.krx.co.kr/WEB-APP/coreboard/inc/js/common.js",
+              "sessionTargetType": "page",
+              "protocol": "h2",
+              "rendererStartTime": 577.6410000324249,
+              "networkRequestTime": 582.9730000495911,
+              "networkEndTime": 807.2250000238419,
+              "finished": true,
+              "transferSize": 4902,
+              "resourceSize": 19266,
+              "statusCode": 200,
+              "mimeType": "application/javascript",
+              "resourceType": "Script",
+              "priority": "High",
+              "experimentalFromMainFrame": true,
+              "entity": "krx.co.kr"
+            },
+            {
+              "url": "https://ets.krx.co.kr/WEB-APP/autocomplete/autocomplete.js",
+              "sessionTargetType": "page",
+              "protocol": "h2",
+              "rendererStartTime": 577.9190000295639,
+              "networkRequestTime": 583.5950000286102,
+              "networkEndTime": 749.9830000400543,
+              "finished": true,
+              "transferSize": 1545,
+              "resourceSize": 4424,
+              "statusCode": 200,
+              "mimeType": "application/javascript",
+              "resourceType": "Script",
+              "priority": "High",
+              "experimentalFromMainFrame": true,
+              "entity": "krx.co.kr"
+            },
+            {
+              "url": "https://ets.krx.co.kr/WEB-APP/jwplayer/jwplayer.js",
+              "sessionTargetType": "page",
+              "protocol": "h2",
+              "rendererStartTime": 578.9560000896454,
+              "networkRequestTime": 584.2820000648499,
+              "networkEndTime": 815.5060000419617,
+              "finished": true,
+              "transferSize": 42854,
+              "resourceSize": 155549,
+              "statusCode": 200,
+              "mimeType": "application/javascript",
+              "resourceType": "Script",
+              "priority": "High",
+              "experimentalFromMainFrame": true,
+              "entity": "krx.co.kr"
+            },
+            {
+              "url": "https://ets.krx.co.kr/WEB-APP/socialLogin/social.js",
+              "sessionTargetType": "page",
+              "protocol": "h2",
+              "rendererStartTime": 579.279000043869,
+              "networkRequestTime": 584.779000043869,
+              "networkEndTime": 753.5000001192093,
+              "finished": true,
+              "transferSize": 3303,
+              "resourceSize": 8566,
+              "statusCode": 200,
+              "mimeType": "application/javascript",
+              "resourceType": "Script",
+              "priority": "High",
+              "experimentalFromMainFrame": true,
+              "entity": "krx.co.kr"
+            },
+            {
+              "url": "https://ets.krx.co.kr/WEB-APP/webponent/webponent.licenseKey.js",
+              "sessionTargetType": "page",
+              "protocol": "h2",
+              "rendererStartTime": 579.5960000753403,
+              "networkRequestTime": 585.3340001106262,
+              "networkEndTime": 754.3200000524521,
+              "finished": true,
+              "transferSize": 526,
+              "resourceSize": 889,
+              "statusCode": 200,
+              "mimeType": "application/javascript",
+              "resourceType": "Script",
+              "priority": "High",
+              "experimentalFromMainFrame": true,
+              "entity": "krx.co.kr"
+            },
+            {
+              "url": "https://ets.krx.co.kr/WEB-APP/webponent/grid/external/underscore-min.js",
+              "sessionTargetType": "page",
+              "protocol": "h2",
+              "rendererStartTime": 579.920000076294,
+              "networkRequestTime": 585.9079999923706,
+              "networkEndTime": 754.8949999809265,
+              "finished": true,
+              "transferSize": 5227,
+              "resourceSize": 14688,
+              "statusCode": 200,
+              "mimeType": "application/javascript",
+              "resourceType": "Script",
+              "priority": "High",
+              "experimentalFromMainFrame": true,
+              "entity": "krx.co.kr"
+            },
+            {
+              "url": "https://ets.krx.co.kr/WEB-APP/webponent/grid/external/jquery.mousewheel.min.js",
+              "sessionTargetType": "page",
+              "protocol": "h2",
+              "rendererStartTime": 580.2620000839233,
+              "networkRequestTime": 586.5230000019073,
+              "networkEndTime": 755.4300000667572,
+              "finished": true,
+              "transferSize": 1403,
+              "resourceSize": 2745,
+              "statusCode": 200,
+              "mimeType": "application/javascript",
+              "resourceType": "Script",
+              "priority": "High",
+              "experimentalFromMainFrame": true,
+              "entity": "krx.co.kr"
+            },
+            {
+              "url": "https://ets.krx.co.kr/WEB-APP/webponent/grid/webponent.grid.js",
+              "sessionTargetType": "page",
+              "protocol": "h2",
+              "rendererStartTime": 580.6550000905991,
+              "networkRequestTime": 586.9550000429153,
+              "networkEndTime": 890.4550000429153,
+              "finished": true,
+              "transferSize": 38369,
+              "resourceSize": 207059,
+              "statusCode": 200,
+              "mimeType": "application/javascript",
+              "resourceType": "Script",
+              "priority": "High",
+              "experimentalFromMainFrame": true,
+              "entity": "krx.co.kr"
+            },
+            {
+              "url": "https://ets.krx.co.kr/WEB-APP/webponent/grid/external/webponent.pagingUI.js",
+              "sessionTargetType": "page",
+              "protocol": "h2",
+              "rendererStartTime": 581.0479999780655,
+              "networkRequestTime": 587.4259999990463,
+              "networkEndTime": 787.4500000476837,
+              "finished": true,
+              "transferSize": 3079,
+              "resourceSize": 13476,
+              "statusCode": 200,
+              "mimeType": "application/javascript",
+              "resourceType": "Script",
+              "priority": "High",
+              "experimentalFromMainFrame": true,
+              "entity": "krx.co.kr"
+            },
+            {
+              "url": "https://ets.krx.co.kr/WEB-APP/webponent/grid/webponent.grid.UIplugin.js",
+              "sessionTargetType": "page",
+              "protocol": "h2",
+              "rendererStartTime": 581.4800000190735,
+              "networkRequestTime": 587.921000123024,
+              "networkEndTime": 808.1840000152588,
+              "finished": true,
+              "transferSize": 4921,
+              "resourceSize": 22786,
+              "statusCode": 200,
+              "mimeType": "application/javascript",
+              "resourceType": "Script",
+              "priority": "High",
+              "experimentalFromMainFrame": true,
+              "entity": "krx.co.kr"
+            },
+            {
+              "url": "https://ets.krx.co.kr/WEB-APP/webponent/grid/external/json2.min.js",
+              "sessionTargetType": "page",
+              "protocol": "h2",
+              "rendererStartTime": 581.9740000963211,
+              "networkRequestTime": 588.3480000495911,
+              "networkEndTime": 809.1290000677109,
+              "finished": true,
+              "transferSize": 3467,
+              "resourceSize": 9295,
+              "statusCode": 200,
+              "mimeType": "application/javascript",
+              "resourceType": "Script",
+              "priority": "High",
+              "experimentalFromMainFrame": true,
+              "entity": "krx.co.kr"
+            },
+            {
+              "url": "https://ets.krx.co.kr/WEB-APP/webponent/grid/external/lz-string.js",
+              "sessionTargetType": "page",
+              "protocol": "h2",
+              "rendererStartTime": 582.2079999446869,
+              "networkRequestTime": 588.8040000200272,
+              "networkEndTime": 809.7910001277924,
+              "finished": true,
+              "transferSize": 2985,
+              "resourceSize": 19468,
+              "statusCode": 200,
+              "mimeType": "application/javascript",
+              "resourceType": "Script",
+              "priority": "High",
+              "experimentalFromMainFrame": true,
+              "entity": "krx.co.kr"
+            },
+            {
+              "url": "https://ets.krx.co.kr/WEB-APP/webponent/grid/webponent.report.js",
+              "sessionTargetType": "page",
+              "protocol": "h2",
+              "rendererStartTime": 582.4090000391006,
+              "networkRequestTime": 591.7570000886917,
+              "networkEndTime": 811.0340000391006,
+              "finished": true,
+              "transferSize": 3802,
+              "resourceSize": 15049,
+              "statusCode": 200,
+              "mimeType": "application/javascript",
+              "resourceType": "Script",
+              "priority": "High",
+              "experimentalFromMainFrame": true,
+              "entity": "krx.co.kr"
+            },
+            {
+              "url": "https://ets.krx.co.kr/WEB-APP/webponent/grid/webponent.grid.AjaxTree.js",
+              "sessionTargetType": "page",
+              "protocol": "h2",
+              "rendererStartTime": 582.6219999790192,
+              "networkRequestTime": 592.3980000019073,
+              "networkEndTime": 811.7130000591278,
+              "finished": true,
+              "transferSize": 1304,
+              "resourceSize": 3296,
+              "statusCode": 200,
+              "mimeType": "application/javascript",
+              "resourceType": "Script",
+              "priority": "High",
+              "experimentalFromMainFrame": true,
+              "entity": "krx.co.kr"
+            },
+            {
+              "url": "https://ets.krx.co.kr/WEB-APP/webponent/chart/lib/comm/raphael.js",
+              "sessionTargetType": "page",
+              "protocol": "h2",
+              "rendererStartTime": 582.795000076294,
+              "networkRequestTime": 592.8690000772476,
+              "networkEndTime": 902.4550000429153,
+              "finished": true,
+              "transferSize": 64678,
+              "resourceSize": 299528,
+              "statusCode": 200,
+              "mimeType": "application/javascript",
+              "resourceType": "Script",
+              "priority": "High",
+              "experimentalFromMainFrame": true,
+              "entity": "krx.co.kr"
+            },
+            {
+              "url": "https://ets.krx.co.kr/WEB-APP/webponent/chart/lib/comm/webponent.comm.common.js",
+              "sessionTargetType": "page",
+              "protocol": "h2",
+              "rendererStartTime": 583.0039999485016,
+              "networkRequestTime": 593.972000002861,
+              "networkEndTime": 891.8270000219345,
+              "finished": true,
+              "transferSize": 1218,
+              "resourceSize": 5219,
+              "statusCode": 200,
+              "mimeType": "application/javascript",
+              "resourceType": "Script",
+              "priority": "High",
+              "experimentalFromMainFrame": true,
+              "entity": "krx.co.kr"
+            },
+            {
+              "url": "https://ets.krx.co.kr/WEB-APP/webponent/chart/lib/comm/jquery.ui.touch-punch.min.js",
+              "sessionTargetType": "page",
+              "protocol": "h2",
+              "rendererStartTime": 583.2039999961853,
+              "networkRequestTime": 595.1680001020432,
+              "networkEndTime": 895.2740000486374,
+              "finished": true,
+              "transferSize": 757,
+              "resourceSize": 1301,
+              "statusCode": 200,
+              "mimeType": "application/javascript",
+              "resourceType": "Script",
+              "priority": "High",
+              "experimentalFromMainFrame": true,
+              "entity": "krx.co.kr"
+            },
+            {
+              "url": "https://ets.krx.co.kr/WEB-APP/webponent/chart/lib/chart/webponent.chart.js",
+              "sessionTargetType": "page",
+              "protocol": "h2",
+              "rendererStartTime": 583.6000000238419,
+              "networkRequestTime": 595.7130000591278,
+              "networkEndTime": 970.2979999780655,
+              "finished": true,
+              "transferSize": 52216,
+              "resourceSize": 390330,
+              "statusCode": 200,
+              "mimeType": "application/javascript",
+              "resourceType": "Script",
+              "priority": "High",
+              "experimentalFromMainFrame": true,
+              "entity": "krx.co.kr"
+            },
+            {
+              "url": "https://ets.krx.co.kr/WEB-APP/webponent/chart/lib/visual/webponent.visual.horizon.js",
+              "sessionTargetType": "page",
+              "protocol": "h2",
+              "rendererStartTime": 583.795000076294,
+              "networkRequestTime": 597.0550000667572,
+              "networkEndTime": 925.7080000638962,
+              "finished": true,
+              "transferSize": 23995,
+              "resourceSize": 110524,
+              "statusCode": 200,
+              "mimeType": "application/javascript",
+              "resourceType": "Script",
+              "priority": "High",
+              "experimentalFromMainFrame": true,
+              "entity": "krx.co.kr"
+            },
+            {
+              "url": "https://ets.krx.co.kr/WEB-APP/webponent/chart/lib/visual/webponent.visual.korea.js",
+              "sessionTargetType": "page",
+              "protocol": "h2",
+              "rendererStartTime": 583.9960000514984,
+              "networkRequestTime": 597.5950000286102,
+              "networkEndTime": 970.9370000362396,
+              "finished": true,
+              "transferSize": 27833,
+              "resourceSize": 145572,
+              "statusCode": 200,
+              "mimeType": "application/javascript",
+              "resourceType": "Script",
+              "priority": "High",
+              "experimentalFromMainFrame": true,
+              "entity": "krx.co.kr"
+            },
+            {
+              "url": "https://ets.krx.co.kr/WEB-APP/webponent/chart/lib/visual/webponent.visual.pie.js",
+              "sessionTargetType": "page",
+              "protocol": "h2",
+              "rendererStartTime": 584.2010000944138,
+              "networkRequestTime": 598.1069999933243,
+              "networkEndTime": 969.6850000619888,
+              "finished": true,
+              "transferSize": 21671,
+              "resourceSize": 97087,
+              "statusCode": 200,
+              "mimeType": "application/javascript",
+              "resourceType": "Script",
+              "priority": "High",
+              "experimentalFromMainFrame": true,
+              "entity": "krx.co.kr"
+            },
+            {
+              "url": "https://ets.krx.co.kr/WEB-APP/webponent/chart/lib/visual/webponent.visual.scatterplot.js",
+              "sessionTargetType": "page",
+              "protocol": "h2",
+              "rendererStartTime": 584.4690001010895,
+              "networkRequestTime": 598.6220000982285,
+              "networkEndTime": 968.2890000343323,
+              "finished": true,
+              "transferSize": 25555,
+              "resourceSize": 124793,
+              "statusCode": 200,
+              "mimeType": "application/javascript",
+              "resourceType": "Script",
+              "priority": "High",
+              "experimentalFromMainFrame": true,
+              "entity": "krx.co.kr"
+            },
+            {
+              "url": "https://ets.krx.co.kr/WEB-APP/webponent/chart/lib/visual/webponent.visual.treemap.js",
+              "sessionTargetType": "page",
+              "protocol": "h2",
+              "rendererStartTime": 584.7430001497269,
+              "networkRequestTime": 599.1950000524521,
+              "networkEndTime": 969.9800000190735,
+              "finished": true,
+              "transferSize": 24395,
+              "resourceSize": 116580,
+              "statusCode": 200,
+              "mimeType": "application/javascript",
+              "resourceType": "Script",
+              "priority": "High",
+              "experimentalFromMainFrame": true,
+              "entity": "krx.co.kr"
+            },
+            {
+              "url": "https://ets.krx.co.kr/main/js/main.js?v=20240328",
+              "sessionTargetType": "page",
+              "protocol": "h2",
+              "rendererStartTime": 584.9730000495911,
+              "networkRequestTime": 602.807000041008,
+              "networkEndTime": 956.444000005722,
+              "finished": true,
+              "transferSize": 1615,
+              "resourceSize": 4664,
+              "statusCode": 200,
+              "mimeType": "application/javascript",
+              "resourceType": "Script",
+              "priority": "High",
+              "experimentalFromMainFrame": true,
+              "entity": "krx.co.kr"
+            },
+            {
+              "url": "https://ets.krx.co.kr/res/pc/img/logo-ets.png",
+              "sessionTargetType": "page",
+              "protocol": "h2",
+              "rendererStartTime": 585.2239999771118,
+              "networkRequestTime": 603.8200000524521,
+              "networkEndTime": 956.9770001173019,
+              "finished": true,
+              "transferSize": 2807,
+              "resourceSize": 2678,
+              "statusCode": 200,
+              "mimeType": "image/png",
+              "resourceType": "Image",
+              "priority": "Medium",
+              "experimentalFromMainFrame": true,
+              "entity": "krx.co.kr"
+            },
+            {
+              "url": "https://ets.krx.co.kr/main/img/pc/btn_ebook2.png",
+              "sessionTargetType": "page",
+              "protocol": "h2",
+              "rendererStartTime": 585.4410001039505,
+              "networkRequestTime": 604.3940000534058,
+              "networkEndTime": 957.4480000734329,
+              "finished": true,
+              "transferSize": 5219,
+              "resourceSize": 5083,
+              "statusCode": 200,
+              "mimeType": "image/png",
+              "resourceType": "Image",
+              "priority": "Medium",
+              "experimentalFromMainFrame": true,
+              "entity": "krx.co.kr"
+            },
+            {
+              "url": "https://ets.krx.co.kr/main/img/pc/main_partner_01.png",
+              "sessionTargetType": "page",
+              "protocol": "h2",
+              "rendererStartTime": 585.6450001001358,
+              "networkRequestTime": 1106.4099999666214,
+              "networkEndTime": 1140.28300011158,
+              "finished": true,
+              "transferSize": 30670,
+              "resourceSize": 30524,
+              "statusCode": 200,
+              "mimeType": "image/png",
+              "resourceType": "Image",
+              "priority": "Medium",
+              "experimentalFromMainFrame": true,
+              "entity": "krx.co.kr"
+            },
+            {
+              "url": "https://ets.krx.co.kr/main/img/pc/main_partner_02.png",
+              "sessionTargetType": "page",
+              "protocol": "h2",
+              "rendererStartTime": 585.8500000238419,
+              "networkRequestTime": 1107.4990000724792,
+              "networkEndTime": 1140.7420001029968,
+              "finished": true,
+              "transferSize": 11372,
+              "resourceSize": 11234,
+              "statusCode": 200,
+              "mimeType": "image/png",
+              "resourceType": "Image",
+              "priority": "Medium",
+              "experimentalFromMainFrame": true,
+              "entity": "krx.co.kr"
+            },
+            {
+              "url": "https://ets.krx.co.kr/main/img/pc/main_partner_03.png?v=20240328",
+              "sessionTargetType": "page",
+              "protocol": "h2",
+              "rendererStartTime": 586.029000043869,
+              "networkRequestTime": 1167.8280000686646,
+              "networkEndTime": 1190.7860001325607,
+              "finished": true,
+              "transferSize": 18030,
+              "resourceSize": 17883,
+              "statusCode": 200,
+              "mimeType": "image/png",
+              "resourceType": "Image",
+              "priority": "Medium",
+              "experimentalFromMainFrame": true,
+              "entity": "krx.co.kr"
+            },
+            {
+              "url": "https://ets.krx.co.kr/main/img/pc/main_partner_04.png",
+              "sessionTargetType": "page",
+              "protocol": "h2",
+              "rendererStartTime": 586.2159999608994,
+              "networkRequestTime": 1271.4790000915527,
+              "networkEndTime": 1323.4850000143051,
+              "finished": true,
+              "transferSize": 9406,
+              "resourceSize": 9270,
+              "statusCode": 200,
+              "mimeType": "image/png",
+              "resourceType": "Image",
+              "priority": "Low",
+              "experimentalFromMainFrame": true,
+              "entity": "krx.co.kr"
+            },
+            {
+              "url": "https://ets.krx.co.kr/main/img/pc/main_partner_05.png",
+              "sessionTargetType": "page",
+              "protocol": "h2",
+              "rendererStartTime": 590.183000087738,
+              "networkRequestTime": 1280.667000055313,
+              "networkEndTime": 1339.7020000219345,
+              "finished": true,
+              "transferSize": 10456,
+              "resourceSize": 10318,
+              "statusCode": 200,
+              "mimeType": "image/png",
+              "resourceType": "Image",
+              "priority": "Low",
+              "experimentalFromMainFrame": true,
+              "entity": "krx.co.kr"
+            },
+            {
+              "url": "https://ets.krx.co.kr/main/img/pc/main_partner_06.png",
+              "sessionTargetType": "page",
+              "protocol": "h2",
+              "rendererStartTime": 590.4220000505447,
+              "networkRequestTime": 1394.045000076294,
+              "networkEndTime": 1434.1150000095367,
+              "finished": true,
+              "transferSize": 7411,
+              "resourceSize": 7275,
+              "statusCode": 200,
+              "mimeType": "image/png",
+              "resourceType": "Image",
+              "priority": "Low",
+              "experimentalFromMainFrame": true,
+              "entity": "krx.co.kr"
+            },
+            {
+              "url": "https://ets.krx.co.kr/main/img/pc/main_partner_07.png",
+              "sessionTargetType": "page",
+              "protocol": "h2",
+              "rendererStartTime": 590.6250001192093,
+              "networkRequestTime": 1394.5140000581741,
+              "networkEndTime": 1466.2530000209808,
+              "finished": true,
+              "transferSize": 11511,
+              "resourceSize": 11373,
+              "statusCode": 200,
+              "mimeType": "image/png",
+              "resourceType": "Image",
+              "priority": "Low",
+              "experimentalFromMainFrame": true,
+              "entity": "krx.co.kr"
+            },
+            {
+              "url": "https://ets.krx.co.kr/main/img/pc/main_partner_08.png?v=20240328",
+              "sessionTargetType": "page",
+              "protocol": "h2",
+              "rendererStartTime": 590.8260000944138,
+              "networkRequestTime": 1394.8540000915527,
+              "networkEndTime": 1472.5140000581741,
+              "finished": true,
+              "transferSize": 8486,
+              "resourceSize": 8350,
+              "statusCode": 200,
+              "mimeType": "image/png",
+              "resourceType": "Image",
+              "priority": "Low",
+              "experimentalFromMainFrame": true,
+              "entity": "krx.co.kr"
+            },
+            {
+              "url": "https://ets.krx.co.kr/main/img/pc/main_partner_09.png",
+              "sessionTargetType": "page",
+              "protocol": "h2",
+              "rendererStartTime": 591.0370000600815,
+              "networkRequestTime": 1395.1790001392365,
+              "networkEndTime": 1473.0650000572205,
+              "finished": true,
+              "transferSize": 9620,
+              "resourceSize": 9491,
+              "statusCode": 200,
+              "mimeType": "image/png",
+              "resourceType": "Image",
+              "priority": "Low",
+              "experimentalFromMainFrame": true,
+              "entity": "krx.co.kr"
+            },
+            {
+              "url": "https://ets.krx.co.kr/main/img/pc/main_partner_11.png",
+              "sessionTargetType": "page",
+              "protocol": "h2",
+              "rendererStartTime": 591.2410000562668,
+              "networkRequestTime": 1395.4950000047684,
+              "networkEndTime": 1474.932000041008,
+              "finished": true,
+              "transferSize": 16677,
+              "resourceSize": 16530,
+              "statusCode": 200,
+              "mimeType": "image/png",
+              "resourceType": "Image",
+              "priority": "Low",
+              "experimentalFromMainFrame": true,
+              "entity": "krx.co.kr"
+            },
+            {
+              "url": "https://ets.krx.co.kr/main/img/pc/main_partner_12.png",
+              "sessionTargetType": "page",
+              "protocol": "h2",
+              "rendererStartTime": 591.4620000123978,
+              "networkRequestTime": 1395.7860000133514,
+              "networkEndTime": 1475.5540000200272,
+              "finished": true,
+              "transferSize": 4464,
+              "resourceSize": 4334,
+              "statusCode": 200,
+              "mimeType": "image/png",
+              "resourceType": "Image",
+              "priority": "Low",
+              "experimentalFromMainFrame": true,
+              "entity": "krx.co.kr"
+            },
+            {
+              "url": "https://www.googletagmanager.com/gtag/js?id=G-6BL87BBZLK",
+              "sessionTargetType": "page",
+              "protocol": "h2",
+              "rendererStartTime": 605.8710000514984,
+              "networkRequestTime": 1396.1319999694824,
+              "networkEndTime": 1856.2190001010895,
+              "finished": true,
+              "transferSize": 108964,
+              "resourceSize": 323926,
+              "statusCode": 200,
+              "mimeType": "application/javascript",
+              "resourceType": "Script",
+              "priority": "Low",
+              "experimentalFromMainFrame": true,
+              "entity": "Google Tag Manager"
+            },
+            {
+              "url": "https://apis.google.com/js/platform.js",
+              "sessionTargetType": "page",
+              "protocol": "h2",
+              "rendererStartTime": 1296.976000070572,
+              "networkRequestTime": 1396.4390000104904,
+              "networkEndTime": 1813.6840000152588,
+              "finished": true,
+              "transferSize": 24747,
+              "resourceSize": 64283,
+              "statusCode": 200,
+              "mimeType": "text/javascript",
+              "resourceType": "Script",
+              "priority": "Low",
+              "experimentalFromMainFrame": true,
+              "entity": "Other Google APIs/SDKs"
+            },
+            {
+              "url": "https://connect.facebook.net/ko_KR/sdk.js",
+              "sessionTargetType": "page",
+              "protocol": "h2",
+              "rendererStartTime": 1298.0480000972748,
+              "networkRequestTime": 1396.75100004673,
+              "networkEndTime": 1568.432000041008,
+              "finished": true,
+              "transferSize": 3702,
+              "resourceSize": 3093,
+              "statusCode": 200,
+              "mimeType": "application/x-javascript",
+              "resourceType": "Script",
+              "priority": "Low",
+              "experimentalFromMainFrame": true,
+              "entity": "Facebook"
+            },
+            {
+              "url": "https://ets.krx.co.kr/main/data.jspx?cmd=getBoardData&boardId=board3",
+              "sessionTargetType": "page",
+              "protocol": "h2",
+              "rendererStartTime": 1411.5149999856949,
+              "networkRequestTime": 1413.8370000123978,
+              "networkEndTime": 1972.0080000162125,
+              "finished": true,
+              "transferSize": 921,
+              "resourceSize": 1940,
+              "statusCode": 200,
+              "mimeType": "application/json",
+              "resourceType": "XHR",
+              "priority": "High",
+              "experimentalFromMainFrame": true,
+              "entity": "krx.co.kr"
+            },
+            {
+              "url": "https://ets.krx.co.kr/res/pc/img/bu_templet.png",
+              "sessionTargetType": "page",
+              "protocol": "h2",
+              "rendererStartTime": 1414.7350000143051,
+              "networkRequestTime": 1426.8100000619888,
+              "networkEndTime": 1489.8400000333786,
+              "finished": true,
+              "transferSize": 3934,
+              "resourceSize": 3798,
+              "statusCode": 200,
+              "mimeType": "image/png",
+              "resourceType": "Image",
+              "priority": "High",
+              "experimentalFromMainFrame": true,
+              "entity": "krx.co.kr"
+            },
+            {
+              "url": "https://ets.krx.co.kr/main/img/pc/main_bg_visual.png",
+              "sessionTargetType": "page",
+              "protocol": "h2",
+              "rendererStartTime": 1415.8569999933243,
+              "networkRequestTime": 1427.3900001049042,
+              "networkEndTime": 1524.835000038147,
+              "finished": true,
+              "transferSize": 594336,
+              "resourceSize": 593879,
+              "statusCode": 200,
+              "mimeType": "image/png",
+              "resourceType": "Image",
+              "priority": "High",
+              "experimentalFromMainFrame": true,
+              "entity": "krx.co.kr"
+            },
+            {
+              "url": "https://ets.krx.co.kr/main/img/pc/main_control.png",
+              "sessionTargetType": "page",
+              "protocol": "h2",
+              "rendererStartTime": 1416.7310000658035,
+              "networkRequestTime": 1427.8060001134872,
+              "networkEndTime": 1490.699000120163,
+              "finished": true,
+              "transferSize": 2969,
+              "resourceSize": 2841,
+              "statusCode": 200,
+              "mimeType": "image/png",
+              "resourceType": "Image",
+              "priority": "High",
+              "experimentalFromMainFrame": true,
+              "entity": "krx.co.kr"
+            },
+            {
+              "url": "https://ets.krx.co.kr/main/img/pc/main_bg_openinfo.png",
+              "sessionTargetType": "page",
+              "protocol": "h2",
+              "rendererStartTime": 1417.4010000228882,
+              "networkRequestTime": 1428.2350000143051,
+              "networkEndTime": 1491.142000079155,
+              "finished": true,
+              "transferSize": 1292,
+              "resourceSize": 1164,
+              "statusCode": 200,
+              "mimeType": "image/png",
+              "resourceType": "Image",
+              "priority": "High",
+              "experimentalFromMainFrame": true,
+              "entity": "krx.co.kr"
+            },
+            {
+              "url": "https://ets.krx.co.kr/main/img/pc/main_icon_openinfo.png",
+              "sessionTargetType": "page",
+              "protocol": "h2",
+              "rendererStartTime": 1417.9210000038147,
+              "networkRequestTime": 1428.654000043869,
+              "networkEndTime": 1491.7820000648499,
+              "finished": true,
+              "transferSize": 6628,
+              "resourceSize": 6500,
+              "statusCode": 200,
+              "mimeType": "image/png",
+              "resourceType": "Image",
+              "priority": "High",
+              "experimentalFromMainFrame": true,
+              "entity": "krx.co.kr"
+            },
+            {
+              "url": "https://ets.krx.co.kr/main/img/pc/main_go.png",
+              "sessionTargetType": "page",
+              "protocol": "h2",
+              "rendererStartTime": 1418.680999994278,
+              "networkRequestTime": 1429.057000041008,
+              "networkEndTime": 1492.3610000610352,
+              "finished": true,
+              "transferSize": 1378,
+              "resourceSize": 1250,
+              "statusCode": 200,
+              "mimeType": "image/png",
+              "resourceType": "Image",
+              "priority": "High",
+              "experimentalFromMainFrame": true,
+              "entity": "krx.co.kr"
+            },
+            {
+              "url": "https://ets.krx.co.kr/main/img/pc/main_icon_event.png",
+              "sessionTargetType": "page",
+              "protocol": "h2",
+              "rendererStartTime": 1419.108999967575,
+              "networkRequestTime": 1429.4340000152588,
+              "networkEndTime": 1492.8590000867844,
+              "finished": true,
+              "transferSize": 5311,
+              "resourceSize": 5182,
+              "statusCode": 200,
+              "mimeType": "image/png",
+              "resourceType": "Image",
+              "priority": "High",
+              "experimentalFromMainFrame": true,
+              "entity": "krx.co.kr"
+            },
+            {
+              "url": "https://ets.krx.co.kr/main/img/pc/main_more.png",
+              "sessionTargetType": "page",
+              "protocol": "h2",
+              "rendererStartTime": 1419.795000076294,
+              "networkRequestTime": 1429.8340001106262,
+              "networkEndTime": 1493.723000049591,
+              "finished": true,
+              "transferSize": 1222,
+              "resourceSize": 1086,
+              "statusCode": 200,
+              "mimeType": "image/png",
+              "resourceType": "Image",
+              "priority": "High",
+              "experimentalFromMainFrame": true,
+              "entity": "krx.co.kr"
+            },
+            {
+              "url": "https://ets.krx.co.kr/main/img/pc/main_drop.png",
+              "sessionTargetType": "page",
+              "protocol": "h2",
+              "rendererStartTime": 1420.2970000505447,
+              "networkRequestTime": 1430.2120000123978,
+              "networkEndTime": 1494.223000049591,
+              "finished": true,
+              "transferSize": 1131,
+              "resourceSize": 1003,
+              "statusCode": 200,
+              "mimeType": "image/png",
+              "resourceType": "Image",
+              "priority": "High",
+              "experimentalFromMainFrame": true,
+              "entity": "krx.co.kr"
+            },
+            {
+              "url": "https://ets.krx.co.kr/main/img/pc/main_bg_global01.png",
+              "sessionTargetType": "page",
+              "protocol": "h2",
+              "rendererStartTime": 1421.6870000362396,
+              "networkRequestTime": 1430.6960000991821,
+              "networkEndTime": 1494.5759999752045,
+              "finished": true,
+              "transferSize": 8116,
+              "resourceSize": 7980,
+              "statusCode": 200,
+              "mimeType": "image/png",
+              "resourceType": "Image",
+              "priority": "Low",
+              "experimentalFromMainFrame": true,
+              "entity": "krx.co.kr"
+            },
+            {
+              "url": "https://ets.krx.co.kr/main/img/pc/main_bg_global02.png",
+              "sessionTargetType": "page",
+              "protocol": "h2",
+              "rendererStartTime": 1422.2030000686646,
+              "networkRequestTime": 1431.167000055313,
+              "networkEndTime": 1495.7470000982285,
+              "finished": true,
+              "transferSize": 7524,
+              "resourceSize": 7388,
+              "statusCode": 200,
+              "mimeType": "image/png",
+              "resourceType": "Image",
+              "priority": "Low",
+              "experimentalFromMainFrame": true,
+              "entity": "krx.co.kr"
+            },
+            {
+              "url": "https://ets.krx.co.kr/main/img/pc/main_icon_partners.png",
+              "sessionTargetType": "page",
+              "protocol": "h2",
+              "rendererStartTime": 1422.7159999608994,
+              "networkRequestTime": 1431.7290000915527,
+              "networkEndTime": 1496.1210000514984,
+              "finished": true,
+              "transferSize": 2172,
+              "resourceSize": 2044,
+              "statusCode": 200,
+              "mimeType": "image/png",
+              "resourceType": "Image",
+              "priority": "Low",
+              "experimentalFromMainFrame": true,
+              "entity": "krx.co.kr"
+            },
+            {
+              "url": "https://ets.krx.co.kr/main/img/pc/main_point.png",
+              "sessionTargetType": "page",
+              "protocol": "h2",
+              "rendererStartTime": 1423.2200000286102,
+              "networkRequestTime": 1432.1170001029968,
+              "networkEndTime": 1496.4900000095367,
+              "finished": true,
+              "transferSize": 1199,
+              "resourceSize": 1071,
+              "statusCode": 200,
+              "mimeType": "image/png",
+              "resourceType": "Image",
+              "priority": "Low",
+              "experimentalFromMainFrame": true,
+              "entity": "krx.co.kr"
+            },
+            {
+              "url": "https://ets.krx.co.kr/res/pc/img/icon-footer.png",
+              "sessionTargetType": "page",
+              "protocol": "h2",
+              "rendererStartTime": 1424.167000055313,
+              "networkRequestTime": 1432.4990000724792,
+              "networkEndTime": 1520.2090001106262,
+              "finished": true,
+              "transferSize": 1293,
+              "resourceSize": 1157,
+              "statusCode": 200,
+              "mimeType": "image/png",
+              "resourceType": "Image",
+              "priority": "Low",
+              "experimentalFromMainFrame": true,
+              "entity": "krx.co.kr"
+            },
+            {
+              "url": "https://ets.krx.co.kr/res/pc/img/logo-footer.png",
+              "sessionTargetType": "page",
+              "protocol": "h2",
+              "rendererStartTime": 1424.7290000915527,
+              "networkRequestTime": 1432.892000079155,
+              "networkEndTime": 1497.6160000562668,
+              "finished": true,
+              "transferSize": 2639,
+              "resourceSize": 2503,
+              "statusCode": 200,
+              "mimeType": "image/png",
+              "resourceType": "Image",
+              "priority": "Low",
+              "experimentalFromMainFrame": true,
+              "entity": "krx.co.kr"
+            },
+            {
+              "url": "https://ets.krx.co.kr/main/data.jspx?cmd=getTableData&isu_cd=KRD050032402",
+              "sessionTargetType": "page",
+              "protocol": "h2",
+              "rendererStartTime": 1678.8919999599457,
+              "networkRequestTime": 1692.5060000419617,
+              "networkEndTime": 1838.2590000629425,
+              "finished": true,
+              "transferSize": 687,
+              "resourceSize": 551,
+              "statusCode": 200,
+              "mimeType": "text/html",
+              "resourceType": "XHR",
+              "priority": "VeryHigh",
+              "experimentalFromMainFrame": true,
+              "entity": "krx.co.kr"
+            },
+            {
+              "url": "https://ets.krx.co.kr/main/data.jspx?cmd=getMainData&isu_cd=KRD050032402",
+              "sessionTargetType": "page",
+              "protocol": "h2",
+              "rendererStartTime": 1848.6220000982285,
+              "networkRequestTime": 1849.972000002861,
+              "networkEndTime": 1998.9210000038147,
+              "finished": true,
+              "transferSize": 266,
+              "resourceSize": 131,
+              "statusCode": 200,
+              "mimeType": "text/html",
+              "resourceType": "XHR",
+              "priority": "High",
+              "experimentalFromMainFrame": true,
+              "entity": "krx.co.kr"
+            },
+            {
+              "url": "https://ets.krx.co.kr/main/img/pc/main_updown_s.png",
+              "sessionTargetType": "page",
+              "protocol": "h2",
+              "rendererStartTime": 1853.3870000839233,
+              "networkRequestTime": 1854.444000005722,
+              "networkEndTime": 1882.6000000238419,
+              "finished": true,
+              "transferSize": 3512,
+              "resourceSize": 3376,
+              "statusCode": 200,
+              "mimeType": "image/png",
+              "resourceType": "Image",
+              "priority": "High",
+              "experimentalFromMainFrame": true,
+              "entity": "krx.co.kr"
+            },
+            {
+              "url": "https://connect.facebook.net/ko_KR/sdk.js?hash=21bb236bc67fda5779e156277e49fb2c",
+              "sessionTargetType": "page",
+              "protocol": "h3",
+              "rendererStartTime": 1911.794000029564,
+              "networkRequestTime": 1928.794000029564,
+              "networkEndTime": 2034.8950001001358,
+              "finished": true,
+              "transferSize": 76864,
+              "resourceSize": 260097,
+              "statusCode": 200,
+              "mimeType": "application/x-javascript",
+              "resourceType": "Script",
+              "priority": "Low",
+              "experimentalFromMainFrame": true,
+              "entity": "Facebook"
+            },
+            {
+              "url": "https://www.google-analytics.com/g/collect?v=2&tid=G-6BL87BBZLK&gtm=45je4bk0v9102166723za200&_p=1732868430767&gcd=13l3l3l3l1l1&npa=0&dma=0&tag_exp=101925629~102067555~102067808~102077855~102081485&cid=1840280199.1732868432&ul=ko-kr&sr=1536x864&uaa=x86&uab=64&uafvl=Google%2520Chrome%3B131.0.6778.86%7CChromium%3B131.0.6778.86%7CNot_A%2520Brand%3B24.0.0.0&uamb=0&uam=&uap=macOS&uapv=10.15.7&uaw=0&are=1&frm=0&pscdl=noapi&_s=1&sid=1732868432&sct=1&seg=0&dl=https%3A%2F%2Fets.krx.co.kr%2Fmain%2Fmain.jsp&dt=%EB%B0%B0%EC%B6%9C%EA%B6%8C%EC%8B%9C%EC%9E%A5%20%EC%A0%95%EB%B3%B4%ED%94%8C%EB%9E%AB%ED%8F%BC&en=page_view&_fv=1&_nsi=1&_ss=1&_ee=1&tfd=2069",
+              "sessionTargetType": "page",
+              "protocol": "h2",
+              "rendererStartTime": 2067.194000005722,
+              "networkRequestTime": 2068.6050000190735,
+              "networkEndTime": 2329.4900000095367,
+              "finished": true,
+              "transferSize": 542,
+              "resourceSize": 0,
+              "statusCode": 204,
+              "mimeType": "text/plain",
+              "resourceType": "Fetch",
+              "priority": "High",
+              "experimentalFromMainFrame": true,
+              "entity": "Google Analytics"
+            },
+            {
+              "url": "https://www.googletagmanager.com/td?id=G-6BL87BBZLK&v=3&t=t&pid=537734126&dl=ets.krx.co.kr%2Fmain%2Fmain.jsp&tdp=G-6BL87BBZLK;102166723;0;0;0&frm=0&rtg=102166723&slo=33&hlo=3&lst=3&z=0",
+              "sessionTargetType": "page",
+              "protocol": "h2",
+              "rendererStartTime": 2069.4150000810623,
+              "networkRequestTime": 2070.9900000095367,
+              "networkEndTime": 2155.8980000019073,
+              "finished": true,
+              "transferSize": 341,
+              "resourceSize": 0,
+              "statusCode": 204,
+              "mimeType": "text/plain",
+              "resourceType": "Image",
+              "priority": "Low",
+              "experimentalFromMainFrame": true,
+              "entity": "Google Tag Manager"
+            },
+            {
+              "url": "https://ets.krx.co.kr/res/pc/img/bu-main.png",
+              "sessionTargetType": "page",
+              "protocol": "h2",
+              "rendererStartTime": 2070.8359999656677,
+              "networkRequestTime": 2073.236000061035,
+              "networkEndTime": 2113.735000014305,
+              "finished": true,
+              "transferSize": 1201,
+              "resourceSize": 1065,
+              "statusCode": 200,
+              "mimeType": "image/png",
+              "resourceType": "Image",
+              "priority": "Low",
+              "experimentalFromMainFrame": true,
+              "entity": "krx.co.kr"
+            },
+            {
+              "url": "https://ets.krx.co.kr/main/img/pc/main_updown_l.png",
+              "sessionTargetType": "page",
+              "protocol": "h2",
+              "rendererStartTime": 2110.4500000476837,
+              "networkRequestTime": 2120.7450001239777,
+              "networkEndTime": 2158.4670000076294,
+              "finished": true,
+              "transferSize": 2049,
+              "resourceSize": 1921,
+              "statusCode": 200,
+              "mimeType": "image/png",
+              "resourceType": "Image",
+              "priority": "High",
+              "experimentalFromMainFrame": true,
+              "entity": "krx.co.kr"
+            },
+            {
+              "url": "https://ets.krx.co.kr/res/pc/img/favicon.ico",
+              "sessionTargetType": "page",
+              "protocol": "h2",
+              "rendererStartTime": 2222.2860000133514,
+              "networkRequestTime": 2223.0680000782013,
+              "networkEndTime": 2277.1150000095367,
+              "finished": true,
+              "transferSize": 450,
+              "resourceSize": 1150,
+              "statusCode": 200,
+              "mimeType": "image/x-icon",
+              "resourceType": "Other",
+              "priority": "High",
+              "experimentalFromMainFrame": true,
+              "entity": "krx.co.kr"
+            }
+          ],
+          "debugData": {
+            "type": "debugdata",
+            "networkStartTimeTs": 798254887499
+          }
+        }
+      },
+      "resource-summary": {
+        "id": "resource-summary",
+        "title": "Resources Summary",
+        "description": "Aggregates all network requests and groups them by type",
+        "score": 1,
+        "scoreDisplayMode": "informative",
+        "details": {
+          "type": "table",
+          "headings": [
+            {
+              "key": "label",
+              "valueType": "text",
+              "label": "Resource Type"
+            },
+            {
+              "key": "requestCount",
+              "valueType": "numeric",
+              "label": "Requests"
+            },
+            {
+              "key": "transferSize",
+              "valueType": "bytes",
+              "label": "Transfer Size"
+            }
+          ],
+          "items": [
+            {
+              "resourceType": "total",
+              "label": "Total",
+              "requestCount": 89,
+              "transferSize": 1598959
+            },
+            {
+              "resourceType": "image",
+              "label": "Image",
+              "requestCount": 32,
+              "transferSize": 794376
+            },
+            {
+              "resourceType": "script",
+              "label": "Script",
+              "requestCount": 37,
+              "transferSize": 708916
+            },
+            {
+              "resourceType": "stylesheet",
+              "label": "Stylesheet",
+              "requestCount": 15,
+              "transferSize": 86794
+            },
+            {
+              "resourceType": "document",
+              "label": "Document",
+              "requestCount": 1,
+              "transferSize": 6457
+            },
+            {
+              "resourceType": "other",
+              "label": "Other",
+              "requestCount": 4,
+              "transferSize": 2416
+            },
+            {
+              "resourceType": "media",
+              "label": "Media",
+              "requestCount": 0,
+              "transferSize": 0
+            },
+            {
+              "resourceType": "font",
+              "label": "Font",
+              "requestCount": 0,
+              "transferSize": 0
+            },
+            {
+              "resourceType": "third-party",
+              "label": "Third-party",
+              "requestCount": 6,
+              "transferSize": 215160
+            }
+          ]
+        }
+      },
+      "third-party-summary": {
+        "id": "third-party-summary",
+        "title": "Minimize third-party usage",
+        "description": "Third-party code can significantly impact load performance. Limit the number of redundant third-party providers and try to load third-party code after your page has primarily finished loading. [Learn how to minimize third-party impact](https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/loading-third-party-javascript/).",
+        "score": 1,
+        "scoreDisplayMode": "informative",
+        "displayValue": "Third-party code blocked the main thread for 50 ms",
+        "metricSavings": {
+          "TBT": 50
+        },
+        "details": {
+          "type": "table",
+          "headings": [
+            {
+              "key": "entity",
+              "valueType": "text",
+              "label": "Third-Party",
+              "subItemsHeading": {
+                "key": "url",
+                "valueType": "url"
+              }
+            },
+            {
+              "key": "transferSize",
+              "granularity": 1,
+              "valueType": "bytes",
+              "label": "Transfer Size",
+              "subItemsHeading": {
+                "key": "transferSize"
+              }
+            },
+            {
+              "key": "blockingTime",
+              "granularity": 1,
+              "valueType": "ms",
+              "label": "Main-Thread Blocking Time",
+              "subItemsHeading": {
+                "key": "blockingTime"
+              }
+            }
+          ],
+          "items": [
+            {
+              "mainThreadTime": 157.01199999999923,
+              "blockingTime": 38.999999999999986,
+              "transferSize": 109305,
+              "tbtImpact": 38.999999999999986,
+              "entity": "Google Tag Manager",
+              "subItems": {
+                "type": "subitems",
+                "items": [
+                  {
+                    "url": "https://www.googletagmanager.com/gtag/js?id=G-6BL87BBZLK",
+                    "mainThreadTime": 157.01199999999923,
+                    "blockingTime": 38.999999999999986,
+                    "transferSize": 108964,
+                    "tbtImpact": 38.999999999999986
+                  },
+                  {
+                    "url": "https://www.googletagmanager.com/td?id=G-6BL87BBZLK&v=3&t=t&pid=537734126&dl=ets.krx.co.kr%2Fmain%2Fmain.jsp&tdp=G-6BL87BBZLK;102166723;0;0;0&frm=0&rtg=102166723&slo=33&hlo=3&lst=3&z=0",
+                    "mainThreadTime": 0,
+                    "blockingTime": 0,
+                    "transferSize": 341,
+                    "tbtImpact": 0
+                  }
+                ]
+              }
+            },
+            {
+              "mainThreadTime": 78.267,
+              "blockingTime": 13,
+              "transferSize": 80566,
+              "tbtImpact": 13,
+              "entity": "Facebook",
+              "subItems": {
+                "type": "subitems",
+                "items": [
+                  {
+                    "url": "https://connect.facebook.net/ko_KR/sdk.js?hash=21bb236bc67fda5779e156277e49fb2c",
+                    "mainThreadTime": 75.952,
+                    "blockingTime": 13,
+                    "transferSize": 76864,
+                    "tbtImpact": 13
+                  },
+                  {
+                    "url": "https://connect.facebook.net/ko_KR/sdk.js",
+                    "mainThreadTime": 2.315,
+                    "blockingTime": 0,
+                    "transferSize": 3702,
+                    "tbtImpact": 0
+                  }
+                ]
+              }
+            },
+            {
+              "mainThreadTime": 16.054000000000002,
+              "blockingTime": 0,
+              "transferSize": 24747,
+              "tbtImpact": 0,
+              "entity": "Other Google APIs/SDKs",
+              "subItems": {
+                "type": "subitems",
+                "items": [
+                  {
+                    "url": "https://apis.google.com/js/platform.js",
+                    "mainThreadTime": 16.054000000000002,
+                    "blockingTime": 0,
+                    "transferSize": 24747,
+                    "tbtImpact": 0
+                  }
+                ]
+              }
+            },
+            {
+              "mainThreadTime": 0,
+              "blockingTime": 0,
+              "transferSize": 542,
+              "tbtImpact": 0,
+              "entity": "Google Analytics",
+              "subItems": {
+                "type": "subitems",
+                "items": [
+                  {
+                    "url": "https://www.google-analytics.com/g/collect?v=2&tid=G-6BL87BBZLK&gtm=45je4bk0v9102166723za200&_p=1732868430767&gcd=13l3l3l3l1l1&npa=0&dma=0&tag_exp=101925629~102067555~102067808~102077855~102081485&cid=1840280199.1732868432&ul=ko-kr&sr=1536x864&uaa=x86&uab=64&uafvl=Google%2520Chrome%3B131.0.6778.86%7CChromium%3B131.0.6778.86%7CNot_A%2520Brand%3B24.0.0.0&uamb=0&uam=&uap=macOS&uapv=10.15.7&uaw=0&are=1&frm=0&pscdl=noapi&_s=1&sid=1732868432&sct=1&seg=0&dl=https%3A%2F%2Fets.krx.co.kr%2Fmain%2Fmain.jsp&dt=%EB%B0%B0%EC%B6%9C%EA%B6%8C%EC%8B%9C%EC%9E%A5%20%EC%A0%95%EB%B3%B4%ED%94%8C%EB%9E%AB%ED%8F%BC&en=page_view&_fv=1&_nsi=1&_ss=1&_ee=1&tfd=2069",
+                    "mainThreadTime": 0,
+                    "blockingTime": 0,
+                    "transferSize": 542,
+                    "tbtImpact": 0
+                  }
+                ]
+              }
+            }
+          ],
+          "summary": {
+            "wastedBytes": 215160,
+            "wastedMs": 51.999999999999986
+          },
+          "isEntityGrouped": true
+        },
+        "guidanceLevel": 1
+      },
+      "script-treemap-data": {
+        "id": "script-treemap-data",
+        "title": "Script Treemap Data",
+        "description": "Used for treemap app",
+        "score": 1,
+        "scoreDisplayMode": "informative",
+        "details": {
+          "type": "treemap-data",
+          "nodes": [
+            {
+              "name": "https://ets.krx.co.kr/main/main.jsp",
+              "resourceBytes": 2976,
+              "unusedBytes": 174,
+              "children": [
+                {
+                  "name": "(inline) var getContextP…",
+                  "resourceBytes": 850,
+                  "unusedBytes": 174
+                },
+                {
+                  "name": "(inline) var getBoardDat…",
+                  "resourceBytes": 2073,
+                  "unusedBytes": 0
+                },
+                {
+                  "name": "(inline) loadTableData('…",
+                  "resourceBytes": 53,
+                  "unusedBytes": 0
+                }
+              ]
+            },
+            {
+              "name": "https://ets.krx.co.kr/WEB-APP/jquery/jquery.min.js",
+              "resourceBytes": 95957,
+              "unusedBytes": 38509
+            },
+            {
+              "name": "https://ets.krx.co.kr/WEB-APP/jquery/jquery-ui.min.js",
+              "resourceBytes": 240427,
+              "unusedBytes": 216518
+            },
+            {
+              "name": "https://ets.krx.co.kr/WEB-APP/jquery/js.cookie.js",
+              "resourceBytes": 3285,
+              "unusedBytes": 2639
+            },
+            {
+              "name": "https://ets.krx.co.kr/WEB-APP/jquery/jquery.scrollTo.min.js",
+              "resourceBytes": 2447,
+              "unusedBytes": 1904
+            },
+            {
+              "name": "https://ets.krx.co.kr/WEB-APP/jquery/jquery.ui.touch-punch.min.js",
+              "resourceBytes": 1299,
+              "unusedBytes": 872
+            },
+            {
+              "name": "https://ets.krx.co.kr/templets/pc/js/templet.js",
+              "resourceBytes": 5659,
+              "unusedBytes": 4273
+            },
+            {
+              "name": "https://ets.krx.co.kr/res/pc/js/design.js",
+              "resourceBytes": 23144,
+              "unusedBytes": 21035
+            },
+            {
+              "name": "https://ets.krx.co.kr/res/pc/js/func.js",
+              "resourceBytes": 80034,
+              "unusedBytes": 77995
+            },
+            {
+              "name": "https://ets.krx.co.kr/WEB-APP/calendar/calendar.js",
+              "resourceBytes": 21310,
+              "unusedBytes": 21293
+            },
+            {
+              "name": "https://ets.krx.co.kr/WEB-APP/coreboard/inc/js/common.js",
+              "resourceBytes": 18471,
+              "unusedBytes": 18103
+            },
+            {
+              "name": "https://ets.krx.co.kr/WEB-APP/autocomplete/autocomplete.js",
+              "resourceBytes": 4416,
+              "unusedBytes": 4191
+            },
+            {
+              "name": "https://ets.krx.co.kr/WEB-APP/jwplayer/jwplayer.js",
+              "resourceBytes": 155549,
+              "unusedBytes": 145202
+            },
+            {
+              "name": "https://ets.krx.co.kr/WEB-APP/socialLogin/social.js",
+              "resourceBytes": 6909,
+              "unusedBytes": 6139
+            },
+            {
+              "name": "https://ets.krx.co.kr/WEB-APP/webponent/webponent.licenseKey.js",
+              "resourceBytes": 787,
+              "unusedBytes": 0
+            },
+            {
+              "name": "https://ets.krx.co.kr/WEB-APP/webponent/grid/external/underscore-min.js",
+              "resourceBytes": 14688,
+              "unusedBytes": 10983,
+              "children": [
+                {
+                  "name": "underscore.js",
+                  "resourceBytes": 14429,
+                  "unusedBytes": 10983
+                },
+                {
+                  "name": "(unmapped)",
+                  "resourceBytes": 259
+                }
+              ]
+            },
+            {
+              "name": "https://ets.krx.co.kr/WEB-APP/webponent/grid/external/jquery.mousewheel.min.js",
+              "resourceBytes": 2745,
+              "unusedBytes": 1946
+            },
+            {
+              "name": "https://ets.krx.co.kr/WEB-APP/webponent/grid/webponent.grid.js",
+              "resourceBytes": 207059,
+              "unusedBytes": 135541
+            },
+            {
+              "name": "https://ets.krx.co.kr/WEB-APP/webponent/grid/external/webponent.pagingUI.js",
+              "resourceBytes": 12510,
+              "unusedBytes": 10444
+            },
+            {
+              "name": "https://ets.krx.co.kr/WEB-APP/webponent/grid/webponent.grid.UIplugin.js",
+              "resourceBytes": 22656,
+              "unusedBytes": 22483
+            },
+            {
+              "name": "https://ets.krx.co.kr/WEB-APP/webponent/grid/external/json2.min.js",
+              "resourceBytes": 9295,
+              "unusedBytes": 2375
+            },
+            {
+              "name": "https://ets.krx.co.kr/WEB-APP/webponent/grid/external/lz-string.js",
+              "resourceBytes": 19468,
+              "unusedBytes": 18163
+            },
+            {
+              "name": "https://ets.krx.co.kr/WEB-APP/webponent/grid/webponent.report.js",
+              "resourceBytes": 14321,
+              "unusedBytes": 9455
+            },
+            {
+              "name": "https://ets.krx.co.kr/WEB-APP/webponent/grid/webponent.grid.AjaxTree.js",
+              "resourceBytes": 3290,
+              "unusedBytes": 3018
+            },
+            {
+              "name": "https://ets.krx.co.kr/WEB-APP/webponent/chart/lib/comm/raphael.js",
+              "resourceBytes": 295964,
+              "unusedBytes": 199736
+            },
+            {
+              "name": "https://ets.krx.co.kr/WEB-APP/webponent/chart/lib/comm/webponent.comm.common.js",
+              "resourceBytes": 5179,
+              "unusedBytes": 4167
+            },
+            {
+              "name": "https://ets.krx.co.kr/WEB-APP/webponent/chart/lib/comm/jquery.ui.touch-punch.min.js",
+              "resourceBytes": 1299,
+              "unusedBytes": 872
+            },
+            {
+              "name": "https://ets.krx.co.kr/WEB-APP/webponent/chart/lib/chart/webponent.chart.js",
+              "resourceBytes": 390330,
+              "unusedBytes": 326212
+            },
+            {
+              "name": "https://ets.krx.co.kr/WEB-APP/webponent/chart/lib/visual/webponent.visual.horizon.js",
+              "resourceBytes": 110524,
+              "unusedBytes": 58309
+            },
+            {
+              "name": "https://ets.krx.co.kr/WEB-APP/webponent/chart/lib/visual/webponent.visual.korea.js",
+              "resourceBytes": 145572,
+              "unusedBytes": 32196
+            },
+            {
+              "name": "https://ets.krx.co.kr/WEB-APP/webponent/chart/lib/visual/webponent.visual.pie.js",
+              "resourceBytes": 97087,
+              "unusedBytes": 47856
+            },
+            {
+              "name": "https://ets.krx.co.kr/WEB-APP/webponent/chart/lib/visual/webponent.visual.scatterplot.js",
+              "resourceBytes": 124793,
+              "unusedBytes": 73164
+            },
+            {
+              "name": "https://ets.krx.co.kr/WEB-APP/webponent/chart/lib/visual/webponent.visual.treemap.js",
+              "resourceBytes": 116580,
+              "unusedBytes": 68110
+            },
+            {
+              "name": "https://ets.krx.co.kr/main/js/main.js?v=20240328",
+              "resourceBytes": 4664,
+              "unusedBytes": 1698
+            },
+            {
+              "name": "https://connect.facebook.net/ko_KR/sdk.js",
+              "resourceBytes": 3093,
+              "unusedBytes": 289
+            },
+            {
+              "name": "https://apis.google.com/js/platform.js",
+              "resourceBytes": 64283,
+              "unusedBytes": 40791
+            },
+            {
+              "name": "https://www.googletagmanager.com/gtag/js?id=G-6BL87BBZLK",
+              "resourceBytes": 323926,
+              "unusedBytes": 131537
+            },
+            {
+              "name": "https://connect.facebook.net/ko_KR/sdk.js?hash=21bb236bc67fda5779e156277e49fb2c",
+              "resourceBytes": 260097,
+              "unusedBytes": 179424
+            }
+          ]
+        }
+      },
+      "total-byte-weight": {
+        "id": "total-byte-weight",
+        "title": "Avoids enormous network payloads",
+        "description": "Large network payloads cost users real money and are highly correlated with long load times. [Learn how to reduce payload sizes](https://developer.chrome.com/docs/lighthouse/performance/total-byte-weight/).",
+        "score": 1,
+        "scoreDisplayMode": "informative",
+        "numericValue": 1599409,
+        "numericUnit": "byte",
+        "displayValue": "Total size was 1,562 KiB",
+        "details": {
+          "type": "table",
+          "headings": [
+            {
+              "key": "url",
+              "valueType": "url",
+              "label": "URL"
+            },
+            {
+              "key": "totalBytes",
+              "valueType": "bytes",
+              "label": "Transfer Size"
+            }
+          ],
+          "items": [
+            {
+              "url": "https://ets.krx.co.kr/main/img/pc/main_bg_visual.png",
+              "totalBytes": 594336
+            },
+            {
+              "url": "https://www.googletagmanager.com/gtag/js?id=G-6BL87BBZLK",
+              "totalBytes": 108964
+            },
+            {
+              "url": "https://connect.facebook.net/ko_KR/sdk.js?hash=21bb236bc67fda5779e156277e49fb2c",
+              "totalBytes": 76864
+            },
+            {
+              "url": "https://ets.krx.co.kr/WEB-APP/webponent/chart/lib/comm/raphael.js",
+              "totalBytes": 64678
+            },
+            {
+              "url": "https://ets.krx.co.kr/WEB-APP/jquery/jquery-ui.min.js",
+              "totalBytes": 64054
+            },
+            {
+              "url": "https://ets.krx.co.kr/WEB-APP/webponent/chart/lib/chart/webponent.chart.js",
+              "totalBytes": 52216
+            },
+            {
+              "url": "https://ets.krx.co.kr/WEB-APP/jwplayer/jwplayer.js",
+              "totalBytes": 42854
+            },
+            {
+              "url": "https://ets.krx.co.kr/WEB-APP/webponent/grid/webponent.grid.js",
+              "totalBytes": 38369
+            },
+            {
+              "url": "https://ets.krx.co.kr/res/pc/css/contents.css",
+              "totalBytes": 33782
+            },
+            {
+              "url": "https://ets.krx.co.kr/WEB-APP/jquery/jquery.min.js",
+              "totalBytes": 33496
+            }
+          ],
+          "sortedBy": [
+            "totalBytes"
+          ]
+        },
+        "guidanceLevel": 1
+      },
+      "unused-css-rules": {
+        "id": "unused-css-rules",
+        "title": "Reduce unused CSS",
+        "description": "Reduce unused rules from stylesheets and defer CSS not used for above-the-fold content to decrease bytes consumed by network activity. [Learn how to reduce unused CSS](https://developer.chrome.com/docs/lighthouse/performance/unused-css-rules/).",
+        "score": 1,
+        "scoreDisplayMode": "metricSavings",
+        "numericValue": 0,
+        "numericUnit": "millisecond",
+        "displayValue": "",
+        "metricSavings": {
+          "FCP": 0,
+          "LCP": 0
+        },
+        "details": {
+          "type": "opportunity",
+          "headings": [],
+          "items": [],
+          "overallSavingsMs": 0,
+          "overallSavingsBytes": 0,
+          "sortedBy": [
+            "wastedBytes"
+          ],
+          "debugData": {
+            "type": "debugdata",
+            "metricSavings": {
+              "FCP": 0,
+              "LCP": 0
+            }
+          }
+        },
+        "guidanceLevel": 1
+      },
+      "unused-javascript": {
+        "id": "unused-javascript",
+        "title": "Reduce unused JavaScript",
+        "description": "Reduce unused JavaScript and defer loading scripts until they are required to decrease bytes consumed by network activity. [Learn how to reduce unused JavaScript](https://developer.chrome.com/docs/lighthouse/performance/unused-javascript/).",
+        "score": 0,
+        "scoreDisplayMode": "metricSavings",
+        "numericValue": 40,
+        "numericUnit": "millisecond",
+        "displayValue": "Potential savings of 94 KiB",
+        "metricSavings": {
+          "FCP": 0,
+          "LCP": 50
+        },
+        "details": {
+          "type": "opportunity",
+          "headings": [
+            {
+              "key": "url",
+              "valueType": "url",
+              "subItemsHeading": {
+                "key": "source",
+                "valueType": "code"
+              },
+              "label": "URL"
+            },
+            {
+              "key": "totalBytes",
+              "valueType": "bytes",
+              "subItemsHeading": {
+                "key": "sourceBytes"
+              },
+              "label": "Transfer Size"
+            },
+            {
+              "key": "wastedBytes",
+              "valueType": "bytes",
+              "subItemsHeading": {
+                "key": "sourceWastedBytes"
+              },
+              "label": "Potential Savings"
+            }
+          ],
+          "items": [
+            {
+              "url": "https://connect.facebook.net/ko_KR/sdk.js?hash=21bb236bc67fda5779e156277e49fb2c",
+              "totalBytes": 76728,
+              "wastedBytes": 52930,
+              "wastedPercent": 68.9834946193151
+            },
+            {
+              "url": "https://www.googletagmanager.com/gtag/js?id=G-6BL87BBZLK",
+              "totalBytes": 105555,
+              "wastedBytes": 42863,
+              "wastedPercent": 40.60711397047474
+            }
+          ],
+          "overallSavingsMs": 40,
+          "overallSavingsBytes": 95793,
+          "sortedBy": [
+            "wastedBytes"
+          ],
+          "debugData": {
+            "type": "debugdata",
+            "metricSavings": {
+              "FCP": 0,
+              "LCP": 40
+            }
+          }
+        },
+        "guidanceLevel": 1
+      },
+      "modern-image-formats": {
+        "id": "modern-image-formats",
+        "title": "Serve images in next-gen formats",
+        "description": "Image formats like WebP and AVIF often provide better compression than PNG or JPEG, which means faster downloads and less data consumption. [Learn more about modern image formats](https://developer.chrome.com/docs/lighthouse/performance/uses-webp-images/).",
+        "score": 0,
+        "scoreDisplayMode": "metricSavings",
+        "numericValue": 420,
+        "numericUnit": "millisecond",
+        "displayValue": "Potential savings of 603 KiB",
+        "warnings": [],
+        "metricSavings": {
+          "FCP": 0,
+          "LCP": 400
+        },
+        "details": {
+          "type": "opportunity",
+          "headings": [
+            {
+              "key": "node",
+              "valueType": "node",
+              "label": ""
+            },
+            {
+              "key": "url",
+              "valueType": "url",
+              "label": "URL"
+            },
+            {
+              "key": "totalBytes",
+              "valueType": "bytes",
+              "label": "Resource Size"
+            },
+            {
+              "key": "wastedBytes",
+              "valueType": "bytes",
+              "label": "Potential Savings"
+            }
+          ],
+          "items": [
+            {
+              "node": {
+                "type": "node",
+                "lhId": "1-20-DIV",
+                "path": "1,HTML,1,BODY,0,DIV,1,DIV,0,DIV",
+                "selector": "body.pc-main > div.html-wrap > div.body-wrap > div.visual",
+                "boundingRect": {
+                  "top": 116,
+                  "bottom": 486,
+                  "left": 0,
+                  "right": 1334,
+                  "width": 1334,
+                  "height": 370
+                },
+                "snippet": "<div class=\"visual\">",
+                "nodeLabel": "KRX ETS\nMarket Information Platform\nKAU25\n12,550\n0.00%\n위로\n재생/정지\n아래로"
+              },
+              "url": "https://ets.krx.co.kr/main/img/pc/main_bg_visual.png",
+              "fromProtocol": true,
+              "isCrossOrigin": false,
+              "totalBytes": 593879,
+              "wastedBytes": 545971.3,
+              "wastedWebpBytes": 537911
+            },
+            {
+              "node": {
+                "type": "node",
+                "lhId": "1-2-IMG",
+                "path": "1,HTML,1,BODY,0,DIV,1,DIV,3,DIV,1,DIV,2,DIV,1,DIV,0,UL,0,LI,0,A,0,IMG",
+                "selector": "ul > li > a > img",
+                "boundingRect": {
+                  "top": 0,
+                  "bottom": 0,
+                  "left": 0,
+                  "right": 0,
+                  "width": 0,
+                  "height": 0
+                },
+                "snippet": "<img src=\"./img/pc/main_partner_01.png\">",
+                "nodeLabel": "ul > li > a > img"
+              },
+              "url": "https://ets.krx.co.kr/main/img/pc/main_partner_01.png",
+              "fromProtocol": true,
+              "isCrossOrigin": false,
+              "totalBytes": 30524,
+              "wastedBytes": 26537.35,
+              "wastedWebpBytes": 23898
+            },
+            {
+              "node": {
+                "type": "node",
+                "lhId": "1-4-IMG",
+                "path": "1,HTML,1,BODY,0,DIV,1,DIV,3,DIV,1,DIV,2,DIV,1,DIV,0,UL,2,LI,0,A,0,IMG",
+                "selector": "ul > li > a > img",
+                "boundingRect": {
+                  "top": 0,
+                  "bottom": 0,
+                  "left": 0,
+                  "right": 0,
+                  "width": 0,
+                  "height": 0
+                },
+                "snippet": "<img src=\"./img/pc/main_partner_03.png?v=20240328\">",
+                "nodeLabel": "ul > li > a > img"
+              },
+              "url": "https://ets.krx.co.kr/main/img/pc/main_partner_03.png?v=20240328",
+              "fromProtocol": true,
+              "isCrossOrigin": false,
+              "totalBytes": 17883,
+              "wastedBytes": 14392.7,
+              "wastedWebpBytes": 13921
+            },
+            {
+              "node": {
+                "type": "node",
+                "lhId": "1-11-IMG",
+                "path": "1,HTML,1,BODY,0,DIV,1,DIV,3,DIV,1,DIV,2,DIV,1,DIV,0,UL,9,LI,0,A,0,IMG",
+                "selector": "ul > li > a > img",
+                "boundingRect": {
+                  "top": 0,
+                  "bottom": 0,
+                  "left": 0,
+                  "right": 0,
+                  "width": 0,
+                  "height": 0
+                },
+                "snippet": "<img src=\"./img/pc/main_partner_11.png\">",
+                "nodeLabel": "ul > li > a > img"
+              },
+              "url": "https://ets.krx.co.kr/main/img/pc/main_partner_11.png",
+              "fromProtocol": true,
+              "isCrossOrigin": false,
+              "totalBytes": 16530,
+              "wastedBytes": 13592.2,
+              "wastedWebpBytes": 13128
+            },
+            {
+              "node": {
+                "type": "node",
+                "lhId": "1-8-IMG",
+                "path": "1,HTML,1,BODY,0,DIV,1,DIV,3,DIV,1,DIV,2,DIV,1,DIV,0,UL,6,LI,0,A,0,IMG",
+                "selector": "ul > li > a > img",
+                "boundingRect": {
+                  "top": 0,
+                  "bottom": 0,
+                  "left": 0,
+                  "right": 0,
+                  "width": 0,
+                  "height": 0
+                },
+                "snippet": "<img src=\"./img/pc/main_partner_07.png\">",
+                "nodeLabel": "ul > li > a > img"
+              },
+              "url": "https://ets.krx.co.kr/main/img/pc/main_partner_07.png",
+              "fromProtocol": true,
+              "isCrossOrigin": false,
+              "totalBytes": 11373,
+              "wastedBytes": 8835.15,
+              "wastedWebpBytes": 8609
+            },
+            {
+              "node": {
+                "type": "node",
+                "lhId": "1-3-IMG",
+                "path": "1,HTML,1,BODY,0,DIV,1,DIV,3,DIV,1,DIV,2,DIV,1,DIV,0,UL,1,LI,0,A,0,IMG",
+                "selector": "ul > li > a > img",
+                "boundingRect": {
+                  "top": 0,
+                  "bottom": 0,
+                  "left": 0,
+                  "right": 0,
+                  "width": 0,
+                  "height": 0
+                },
+                "snippet": "<img src=\"./img/pc/main_partner_02.png\">",
+                "nodeLabel": "ul > li > a > img"
+              },
+              "url": "https://ets.krx.co.kr/main/img/pc/main_partner_02.png",
+              "fromProtocol": true,
+              "isCrossOrigin": false,
+              "totalBytes": 11234,
+              "wastedBytes": 8587.65,
+              "wastedWebpBytes": 8550
+            }
+          ],
+          "overallSavingsMs": 420,
+          "overallSavingsBytes": 617916.35,
+          "sortedBy": [
+            "wastedBytes"
+          ],
+          "debugData": {
+            "type": "debugdata",
+            "metricSavings": {
+              "FCP": 0,
+              "LCP": 420
+            }
+          }
+        },
+        "guidanceLevel": 3
+      },
+      "efficient-animated-content": {
+        "id": "efficient-animated-content",
+        "title": "Use video formats for animated content",
+        "description": "Large GIFs are inefficient for delivering animated content. Consider using MPEG4/WebM videos for animations and PNG/WebP for static images instead of GIF to save network bytes. [Learn more about efficient video formats](https://developer.chrome.com/docs/lighthouse/performance/efficient-animated-content/)",
+        "score": 1,
+        "scoreDisplayMode": "metricSavings",
+        "numericValue": 0,
+        "numericUnit": "millisecond",
+        "displayValue": "",
+        "metricSavings": {
+          "FCP": 0,
+          "LCP": 0
+        },
+        "details": {
+          "type": "opportunity",
+          "headings": [],
+          "items": [],
+          "overallSavingsMs": 0,
+          "overallSavingsBytes": 0,
+          "sortedBy": [
+            "wastedBytes"
+          ],
+          "debugData": {
+            "type": "debugdata",
+            "metricSavings": {
+              "FCP": 0,
+              "LCP": 0
+            }
+          }
+        },
+        "guidanceLevel": 3
+      },
+      "duplicated-javascript": {
+        "id": "duplicated-javascript",
+        "title": "Remove duplicate modules in JavaScript bundles",
+        "description": "Remove large, duplicate JavaScript modules from bundles to reduce unnecessary bytes consumed by network activity. ",
+        "score": 1,
+        "scoreDisplayMode": "metricSavings",
+        "numericValue": 0,
+        "numericUnit": "millisecond",
+        "displayValue": "",
+        "metricSavings": {
+          "FCP": 0,
+          "LCP": 0
+        },
+        "details": {
+          "type": "opportunity",
+          "headings": [],
+          "items": [],
+          "overallSavingsMs": 0,
+          "overallSavingsBytes": 0,
+          "sortedBy": [
+            "wastedBytes"
+          ],
+          "debugData": {
+            "type": "debugdata",
+            "metricSavings": {
+              "FCP": 0,
+              "LCP": 0
+            }
+          }
+        },
+        "guidanceLevel": 2
+      },
+      "js-libraries": {
+        "id": "js-libraries",
+        "title": "Detected JavaScript libraries",
+        "description": "All front-end JavaScript libraries detected on the page. [Learn more about this JavaScript library detection diagnostic audit](https://developer.chrome.com/docs/lighthouse/best-practices/js-libraries/).",
+        "score": 1,
+        "scoreDisplayMode": "informative",
+        "details": {
+          "type": "table",
+          "headings": [
+            {
+              "key": "name",
+              "valueType": "text",
+              "label": "Name"
+            },
+            {
+              "key": "version",
+              "valueType": "text",
+              "label": "Version"
+            }
+          ],
+          "items": [
+            {
+              "name": "jQuery",
+              "version": "1.11.3",
+              "npm": "jquery"
+            },
+            {
+              "name": "jQuery UI",
+              "version": "1.11.4",
+              "npm": "jquery-ui"
+            },
+            {
+              "name": "Underscore",
+              "version": "1.6.0",
+              "npm": "underscore"
+            }
+          ],
+          "debugData": {
+            "type": "debugdata",
+            "stacks": [
+              {
+                "id": "jquery",
+                "version": "1.11.3"
+              },
+              {
+                "id": "jquery-fast"
+              },
+              {
+                "id": "jquery_ui",
+                "version": "1.11.4"
+              },
+              {
+                "id": "underscore",
+                "version": "1.6.0"
+              }
+            ]
+          }
+        }
+      }
+    },
+    "categories": {
+      "performance": {
+        "title": "Performance",
+        "supportedModes": [
+          "navigation",
+          "timespan",
+          "snapshot"
+        ],
+        "auditRefs": [
+          {
+            "id": "unused-css-rules",
+            "weight": 0,
+            "group": "diagnostics"
+          },
+          {
+            "id": "unused-javascript",
+            "weight": 0,
+            "group": "diagnostics"
+          },
+          {
+            "id": "modern-image-formats",
+            "weight": 0,
+            "group": "diagnostics"
+          },
+          {
+            "id": "efficient-animated-content",
+            "weight": 0,
+            "group": "diagnostics"
+          },
+          {
+            "id": "duplicated-javascript",
+            "weight": 0,
+            "group": "diagnostics"
+          },
+          {
+            "id": "total-byte-weight",
+            "weight": 0,
+            "group": "diagnostics"
+          },
+          {
+            "id": "third-party-summary",
+            "weight": 0,
+            "group": "diagnostics"
+          },
+          {
+            "id": "network-requests",
+            "weight": 0,
+            "group": "hidden"
+          },
+          {
+            "id": "script-treemap-data",
+            "weight": 0,
+            "group": "hidden"
+          },
+          {
+            "id": "resource-summary",
+            "weight": 0,
+            "group": "hidden"
+          }
+        ],
+        "id": "performance",
+        "score": 0
+      },
+      "best-practices": {
+        "title": "Best Practices",
+        "supportedModes": [
+          "navigation",
+          "timespan",
+          "snapshot"
+        ],
+        "auditRefs": [
+          {
+            "id": "js-libraries",
+            "weight": 0,
+            "group": "best-practices-general"
+          }
+        ],
+        "id": "best-practices",
+        "score": 0
+      }
+    }
+  }
