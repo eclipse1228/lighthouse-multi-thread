@@ -13,6 +13,7 @@ interface NetworkRequest {
     statusCode: number;
     resourceSize: number;
     transferSize: number;
+    protocol: string;
 }
 
 interface LighthouseAuditDetails {
@@ -27,6 +28,7 @@ interface LighthouseAudit {
 interface LighthouseResult {
     audits?: {
         'network-requests'?: LighthouseAudit;
+        'resource-summary'?: LighthouseAudit;
     };
 }
 
@@ -90,6 +92,7 @@ export class ChromeInstance {
             onlyCategories: ['performance'],
             onlyAudits: [
                 'network-requests',
+                'resource-summary',
                 'network-rtt',
                 'network-server-latency'
             ],
@@ -114,40 +117,29 @@ export class ChromeInstance {
             
             // 네트워크 요청 데이터 추출
             const networkRequests = result.lhr.audits?.['network-requests']?.details?.items || [];
+            console.log('네트워크 요청 데이터 추출 완료');
             
             if (!networkRequests.length) { 
                 throw new Error('Network requests empty');
             }
-            
-            // 리소스 타입별 요약 데이터 생성
-            const resourceSummary = networkRequests.reduce((acc: any[], request: NetworkRequest) => {
-                const existingType = acc.find(item => item.resourceType === request.resourceType);
-                if (existingType) {
-                    existingType.transferSize += request.transferSize || 0;
-                } else {
-                    acc.push({
-                        resourceType: request.resourceType,
-                        transferSize: request.transferSize || 0
-                    });
-                }
-                return acc;
-            }, []);
+
+            // 네트워크 요약 데이터 추출
+            const resourceSummary = result.lhr.audits?.['resource-summary']?.details?.items || [];
+            console.log('네트워크 요약 데이터 추출:', JSON.stringify(resourceSummary, null, 2));
 
             console.log('데이터 추출 완료(Data Extraction Completed)');
             console.log('네트워크 요청 수(Network Requests):', networkRequests.length);
-            console.log('리소스 타입 수(Resource Types):', resourceSummary.length);
 
             return {
                 networkRequests: networkRequests.map((request: NetworkRequest) => ({
                     url: request.url,
                     resourceType: request.resourceType,
-                    mimeType: request.mimeType,
-                    finished: request.finished,
-                    statusCode: request.statusCode,
                     resourceSize: request.resourceSize,
-                    transferSize: request.transferSize
+                    transferSize: request.transferSize,
+                    statusCode: request.statusCode,
+                    protocol: request.protocol
                 })),
-                resourceSummary
+                resourceSummary: resourceSummary
             };
         } catch (error) {
             console.error('Lighthouse 분석 중 오류 (Lighthouse Analysis Error):', error);

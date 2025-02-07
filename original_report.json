@@ -1644,7 +1644,7 @@
               "resourceType": "total",
               "label": "Total",
               "requestCount": 89,
-              "transferSize": 1598959
+              "transferSize": 1598959 
             },
             {
               "resourceType": "image",

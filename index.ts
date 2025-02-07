@@ -137,7 +137,7 @@ async function main() {
                                 timestamp: new Date()
                             });
                             console.log('lighthouse_resource 데이터 저장 완료(Storing data complete)');
-
+                            console.log(`resource_summary data: ${JSON.stringify(message.data.resourceSummary)}`);
                             // lighthouse_traffic 컬렉션에 저장
                             await trafficCollection.insertOne({
                                 url: message.url,

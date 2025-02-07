@@ -183,6 +183,54 @@
 2. 로깅 개선
    - Chrome 경로 로깅 추가
 
+## 2024-02-07 수정사항 (5차)
+
+### worker.ts 수정
+1. 에러 처리 개선
+   - 에러 발생 시 Chrome 인스턴스 재생성
+   - 에러 메시지 전달 방식 개선
+
+### index.ts 수정
+1. 에러 처리 및 로깅 개선
+   - MongoDB errorCollection에 실패한 URL 기록
+   - 에러 타입 구분 (lighthouse_error, mongodb_error)
+   - 타임스탬프 추가
+2. 데이터 저장 로직 개선
+   - 성공한 경우에만 데이터 저장
+   - 실패한 URL은 별도 기록
+
+### chrome_instance.ts 수정
+1. 네트워크 요청 검증 추가
+   - 빈 네트워크 요청 데이터 체크
+   - 404 페이지 등 무효한 URL 필터링
+
+## 2024-02-07 수정사항 (6차)
+
+### types.d.ts 수정
+1. 타입 정의 개선
+   - NetworkRequest 인터페이스 추가
+   - NetworkSummaryItem 인터페이스 추가
+   - LighthouseAuditDetails와 LighthouseAudit 인터페이스 개선
+
+### chrome_instance.ts 수정
+1. 네트워크 요약 데이터 처리 개선
+   - network-summary audit 추가
+   - 요약 데이터 자동 생성 로직 구현
+   - 기본 리소스 타입 지원 (document, script, stylesheet 등)
+2. 로깅 기능 강화
+   - 네트워크 요청 데이터 추출 로그 추가
+   - 요약 데이터 생성 과정 상세 로깅
+3. 데이터 구조 개선
+   - NetworkRequest 매핑 필드 정리
+   - protocol 필드 추가
+
+## 2025-02-07 수정사항
+
+### Chrome 인스턴스 관리 (chrome_instance.ts) 수정
+- LighthouseResult 인터페이스의 audits 타입 수정
+  - 'resource-summary' 속성 추가로 타입 오류 해결
+  - 네트워크 리소스 요약 데이터 추출 기능 정상화
+
 ## 다음 단계
 1. URL 목록 처리 및 작업 분배 로직 구현
 2. 에러 처리 및 재시도 메커니즘 추가
@@ -222,25 +270,3 @@
     - --disable-gpu: GPU 하드웨어 가속 비활성화
   - Chrome 경로 직접 지정 (/usr/bin/google-chrome)
   - 상세한 로깅 추가
-
-
-## 2024-02-07 수정사항 (5차)
-
-### worker.ts 수정
-1. 에러 처리 개선
-   - 에러 발생 시 Chrome 인스턴스 재생성
-   - 에러 메시지 전달 방식 개선
-
-### index.ts 수정
-1. 에러 처리 및 로깅 개선
-   - MongoDB errorCollection에 실패한 URL 기록
-   - 에러 타입 구분 (lighthouse_error, mongodb_error)
-   - 타임스탬프 추가
-2. 데이터 저장 로직 개선
-   - 성공한 경우에만 데이터 저장
-   - 실패한 URL은 별도 기록
-
-### chrome_instance.ts 수정
-1. 네트워크 요청 검증 추가
-   - 빈 네트워크 요청 데이터 체크
-   - 404 페이지 등 무효한 URL 필터링
