@@ -231,16 +231,40 @@
   - 'resource-summary' 속성 추가로 타입 오류 해결
   - 네트워크 리소스 요약 데이터 추출 기능 정상화
 
-## 다음 단계
-1. URL 목록 처리 및 작업 분배 로직 구현
-2. 에러 처리 및 재시도 메커니즘 추가
-3. 도커라이징 구현
+## 2025-02-07 수정사항 추가 업데이트
 
-## 다음 작업 계획
-1. 에러 복구 메커니즘 개선
-2. 데이터 백업 기능 추가
-3. 성능 최적화
-4. 테스트 커버리지 확대
+### Chrome 인스턴스 관리 (chrome_instance.ts) 수정
+- Lighthouse 분석 데이터 확장
+  - 미사용 JavaScript 데이터 추출 ('unused-javascript')
+  - 미사용 CSS 규칙 데이터 추출 ('unused-css-rules')
+  - 최신 이미지 포맷 데이터 추출 ('modern-image-formats')
+  - lighthouse_unused 테이블 저장을 위한 데이터 구조화
+  - 상세한 로깅 추가
+
+### types.d.ts 수정
+- Lighthouse 타입 정의 확장
+  - UnusedCssItem, UnusedJsItem, ModernImageItem 인터페이스 추가
+  - LighthouseResult audits 타입에 새로운 속성 추가
+  - displayValue가 빈 문자열("")이 될 수 있음을 고려한 타입 정의
+
+## 2025-02-07 수정사항 추가 업데이트 3
+
+### 프로그램 종료 처리 개선 (index.ts)
+- 정상 종료 조건 강화
+  - TEST_LIMIT 도달 시 진행 중인 작업 완료 대기 추가
+  - 모든 URL 처리 완료 시 자동 종료 로직 추가
+  - 워커의 상태(busy/idle) 확인 후 종료하도록 개선
+- 비정상 종료 처리 강화
+  - 워커 오류 발생 시 해당 워커 종료 처리 추가
+  - 워커 종료 시 종료 코드에 따른 상태 구분
+  - 모든 워커 종료 시 프로그램 자동 종료 로직 추가
+
+## 4. 타입스크립트 에러 처리 개선 (2025-02-07)
+### chrome_instance.ts 수정
+- catch 블록의 error 타입을 unknown으로 명시적 지정
+- Error 인스턴스 체크를 통한 타입 가드 추가
+- 에러 메시지 접근 시 타입 안전성 강화
+- 모든 에러 상황에 대한 로깅 추가
 
 ### Lighthouse 모듈 개선 (2024-02-06)
 - chrome_instance.ts 전면 수정
@@ -270,3 +294,9 @@
     - --disable-gpu: GPU 하드웨어 가속 비활성화
   - Chrome 경로 직접 지정 (/usr/bin/google-chrome)
   - 상세한 로깅 추가
+
+## 다음 단계
+
+0. 도커라이징 구현
+1. 성능 최적화
+2. 테스트 커버리지 확대

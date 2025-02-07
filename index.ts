@@ -4,7 +4,6 @@ import os from 'os';
 import path from 'path';
 import { fileURLToPath } from 'url';
 import { UrlManager } from './url_manager.js';
-import { ChromeInstance } from './chrome_instance.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -14,7 +13,7 @@ const MONGO_URI = 'mongodb://localhost:27017';
 const DB_NAME = 'eco-web';
 
 // CPU 코어 수에 기반한 워커 수 설정
-const NUM_WORKERS = os.cpus().length - 12; // 현재 4개 
+const NUM_WORKERS = os.cpus().length - 4; // 현재 12개 
 console.log('사용 가능한 CPU 코어:', os.cpus().length);
 console.log('설정된 워커 수:', NUM_WORKERS);
 
@@ -34,6 +33,7 @@ interface Institution {
 let resourceCollection: Collection;
 let trafficCollection: Collection;
 let errorCollection: Collection;
+let unusedCollection: Collection;
 let client: MongoClient;
 
 async function cleanup() {
@@ -65,14 +65,10 @@ async function main() {
         });
         const db = client.db(DB_NAME);
         
-        // 컬렉션 생성 (처음 실행시..)
-        // resourceCollection = await db.createCollection('lighthouse_resource');
-        // trafficCollection = await db.createCollection('lighthouse_traffic');
-        // errorCollection = await db.createCollection('lighthouse_error');
-        
         resourceCollection = db.collection('lighthouse_resource');
         trafficCollection = db.collection('lighthouse_traffic');
         errorCollection = db.collection('lighthouse_error');
+        unusedCollection = db.collection('lighthouse_unused');
 
         console.log('MongoDB 연결 완료');
         console.log('컬렉션 준비 완료:', {
@@ -89,7 +85,7 @@ async function main() {
         // 워커 생성
         const workers: WorkerStatus[] = [];
         let processedCount = 0;
-        const TEST_LIMIT = 8;
+        const TEST_LIMIT = 50000;
         
         for (let i = 0; i < NUM_WORKERS; i++) {
             console.log(`워커 ${i} 생성 중...`);
@@ -104,6 +100,7 @@ async function main() {
                 data?: { 
                     networkRequests: any[]; 
                     resourceSummary: any[]; 
+                    unusedData: any[];
                 }; 
                 institution?: Institution;
                 error?: string 
@@ -136,8 +133,8 @@ async function main() {
                                 ...message.institution,
                                 timestamp: new Date()
                             });
-                            console.log('lighthouse_resource 데이터 저장 완료(Storing data complete)');
-                            console.log(`resource_summary data: ${JSON.stringify(message.data.resourceSummary)}`);
+                            // console.log('lighthouse_resource 데이터 저장 완료(Storing data complete)');
+                            // console.log(`resource_summary data: ${JSON.stringify(message.data.resourceSummary)}`);
                             // lighthouse_traffic 컬렉션에 저장
                             await trafficCollection.insertOne({
                                 url: message.url,
@@ -146,7 +143,14 @@ async function main() {
                                 timestamp: new Date()
                             });
                             console.log('lighthouse_traffic 데이터 저장 완료(Storing data complete)');
-
+                            
+                            // lighthouse_unused 데이터 저장
+                            await unusedCollection.insertOne({
+                                url: message.url,
+                                unused_data: message.data.unusedData,
+                                timestamp: new Date(),
+                                ...message.institution
+                            });
                             console.log(`작업 완료(Execution completed): ${message.url} (소요 시간(Execution time): ${duration}초)`);
                             processedCount++;
                         } catch (error) {
@@ -175,12 +179,29 @@ async function main() {
                 // 테스트 제한에 도달했는지 확인
                 if (processedCount >= TEST_LIMIT) {
                     console.log(`테스트 제한(${TEST_LIMIT})에 도달. 프로그램을 종료합니다.`);
+                    // 모든 워커가 현재 작업을 완료할 때까지 대기
+                    const busyWorkers = workers.filter(w => w.busy);
+                    if (busyWorkers.length > 0) {
+                        console.log(`${busyWorkers.length}개의 워커가 작업 완료를 기다리는 중...`);
+                        return;
+                    }
+                    console.log('모든 워커의 작업이 완료되었습니다.');
                     await cleanup();
                     process.exit(0);
                 }
 
                 // 다음 URL 처리
                 const nextUrl = await urlManager.getNext();
+                if (!nextUrl) {
+                    // URL이 더 이상 없을 때 모든 워커가 idle 상태인지 확인
+                    const busyWorkers = workers.filter(w => w.busy);
+                    if (busyWorkers.length === 0) {
+                        console.log('모든 URL 처리가 완료되었습니다. 프로그램을 종료합니다.');
+                        await cleanup();
+                        process.exit(0);
+                    }
+                    return;
+                }
                 console.log('다음 URL 가져옴:', nextUrl?.siteLink);
                 
                 if (nextUrl) {
@@ -190,12 +211,28 @@ async function main() {
                 }
             });
 
-            worker.on('error', (error) => {
+            worker.on('error', async (error) => {
                 console.error(`워커 ${i} 오류:`, error);
+                const workerStatus = workers.find(w => w.worker === worker);
+                if (workerStatus) {
+                    workerStatus.busy = false;
+                }
+                // 심각한 오류 발생 시 해당 워커 종료
+                worker.terminate();
             });
 
             worker.on('exit', (code) => {
-                console.log(`워커 ${i} 종료. 종료 코드:`, code);
+                if (code !== 0) {
+                    console.error(`워커 ${i} 비정상 종료. 종료 코드:`, code);
+                } else {
+                    console.log(`워커 ${i} 정상 종료. 종료 코드:`, code);
+                }
+                // 모든 워커가 종료되었는지 확인
+                const activeWorkers = workers.filter(w => w.worker.threadId !== worker.threadId);
+                if (activeWorkers.length === 0) {
+                    console.log('모든 워커가 종료되었습니다.');
+                    cleanup().then(() => process.exit(0));
+                }
             });
         }
 

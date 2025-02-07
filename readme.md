@@ -3,12 +3,13 @@ Google Lighthouse를 통해 많은 url을 병렬처리를 통해 빠르게 데�
 데이터 수집의 이유는 대한민국의 기관의 웹사이트의 탄소배출량을 확인하기 위함이다.
 
 # 설계
-0. Chrome headless Browser(Puppeteer를 통해)
+0. Chrome headless Browser
 - chrome brower 다운로드 필요
+-- window(default), Linux 따로 설정 필요. linux는 /chrome/google-chrome-stable..deb 파일 사용
 
-1. 컨테이너화 (Docker)
+1. 컨테이너화 (Docker) (미완료)
 
-2. 병렬 처리 (Thread)
+2. 병렬 처리 (Thread) (완료)
 - 워커 쓰레드 CPU 코어 수 기반 동적 워커 생성
 - 실시간 상태 보고 시스템 구현
 - 메모리 사용량 모니터링(약 500MB/인스턴스)
@@ -22,7 +23,7 @@ Google Lighthouse를 통해 많은 url을 병렬처리를 통해 빠르게 데�
 
 2) lighthouse의 결과 json 객체의 형태에 대해 궁금하다면, report.json 파일을 읽고 구조를 파악하세요.
 
-2) 아래의 데이터 형식으로 데이터를 저장할 것입니다. (Nosql MongoDB)
+2) 아래의 데이터 형식으로 데이터를 저장할 것입니다. (Nosql MongoDB) (완료)
 
 - Create Databse ecoweb
 - Create Table lighthouse_resource

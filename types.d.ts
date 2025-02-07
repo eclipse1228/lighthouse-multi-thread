@@ -8,6 +8,18 @@ declare module 'lighthouse' {
         statusCode: number;
         protocol: string;
     }
+    interface UnusedCssItem {
+        numericValue: number;
+        displayValue: string;  // 빈 문자열이 될 수 있음
+    }
+    interface UnusedJsItem{
+        numericValue: number;
+        displayValue: string;  // "Potential savings of X KiB" 형식
+    }
+    interface ModernImageItem {
+        numericValue: number;
+        displayValue: string;  // "Potential savings of X KiB" 형식
+    }
 
     interface ResourceSummaryItem {
         resourceType: string;
@@ -17,17 +29,22 @@ declare module 'lighthouse' {
     }
 
     interface LighthouseAuditDetails {
-        items: NetworkRequest[] | ResourceSummaryItem[];
+        items: NetworkRequest[] | ResourceSummaryItem[] | UnusedCssItem[] | UnusedJsItem[] | ModernImageItem[];
     }
 
     interface LighthouseAudit {
         details?: LighthouseAuditDetails;
+        numericValue?: number;
+        displayValue?: string;
     }
 
     interface LighthouseResult {
         audits?: {
             'network-requests'?: LighthouseAudit;
             'resource-summary'?: LighthouseAudit;
+            'unused-javascript'?: LighthouseAudit;
+            'unused-css-rules'?: LighthouseAudit;
+            'modern-image-formats'?: LighthouseAudit;
         };
         report: string;
         artifacts: {
