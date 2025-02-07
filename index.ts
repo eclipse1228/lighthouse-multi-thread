@@ -33,6 +33,7 @@ interface Institution {
 
 let resourceCollection: Collection;
 let trafficCollection: Collection;
+let errorCollection: Collection;
 let client: MongoClient;
 
 async function cleanup() {
@@ -67,14 +68,17 @@ async function main() {
         // 컬렉션 생성 (처음 실행시..)
         // resourceCollection = await db.createCollection('lighthouse_resource');
         // trafficCollection = await db.createCollection('lighthouse_traffic');
+        // errorCollection = await db.createCollection('lighthouse_error');
         
         resourceCollection = db.collection('lighthouse_resource');
         trafficCollection = db.collection('lighthouse_traffic');
+        errorCollection = db.collection('lighthouse_error');
 
         console.log('MongoDB 연결 완료');
         console.log('컬렉션 준비 완료:', {
             resource: await resourceCollection.countDocuments(),
-            traffic: await trafficCollection.countDocuments()
+            traffic: await trafficCollection.countDocuments(),
+            error: await errorCollection.countDocuments()
         });
 
         // URL 관리자 초기화
@@ -118,7 +122,8 @@ async function main() {
                         await resourceCollection.insertOne({
                             url: message.url,
                             network_request: message.data.networkRequests,
-                            ...message.institution
+                            ...message.institution,
+                            timestamp: new Date()
                         });
                         console.log('lighthouse_resource 데이터 저장 완료');
 
@@ -126,7 +131,8 @@ async function main() {
                         await trafficCollection.insertOne({
                             url: message.url,
                             resource_summary: message.data.resourceSummary,
-                            ...message.institution
+                            ...message.institution,
+                            timestamp: new Date()
                         });
                         console.log('lighthouse_traffic 데이터 저장 완료');
 
@@ -134,9 +140,23 @@ async function main() {
                         processedCount++;
                     } catch (error) {
                         console.error(`MongoDB 저장 중 오류: ${message.url}`, error);
+                        // MongoDB 저장 실패 시 에러 로그에 기록
+                        await errorCollection.insertOne({
+                            url: message.url,
+                            error: error instanceof Error ? error.message : String(error),
+                            type: 'mongodb_error',
+                            timestamp: new Date()
+                        });
                     }
-                } else {
+                } else if (message.status === 'error') {
                     console.error(`작업 실패: ${message.url} (소요 시간: ${duration}초)`, message.error);
+                    // 실패한 URL을 에러 로그에 기록
+                    await errorCollection.insertOne({
+                        url: message.url,
+                        error: message.error,
+                        type: 'lighthouse_error',
+                        timestamp: new Date()
+                    });
                 }
 
                 workerStatus.busy = false;

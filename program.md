@@ -222,3 +222,25 @@
     - --disable-gpu: GPU 하드웨어 가속 비활성화
   - Chrome 경로 직접 지정 (/usr/bin/google-chrome)
   - 상세한 로깅 추가
+
+
+## 2024-02-07 수정사항 (5차)
+
+### worker.ts 수정
+1. 에러 처리 개선
+   - 에러 발생 시 Chrome 인스턴스 재생성
+   - 에러 메시지 전달 방식 개선
+
+### index.ts 수정
+1. 에러 처리 및 로깅 개선
+   - MongoDB errorCollection에 실패한 URL 기록
+   - 에러 타입 구분 (lighthouse_error, mongodb_error)
+   - 타임스탬프 추가
+2. 데이터 저장 로직 개선
+   - 성공한 경우에만 데이터 저장
+   - 실패한 URL은 별도 기록
+
+### chrome_instance.ts 수정
+1. 네트워크 요청 검증 추가
+   - 빈 네트워크 요청 데이터 체크
+   - 404 페이지 등 무효한 URL 필터링

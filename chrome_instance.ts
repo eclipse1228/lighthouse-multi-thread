@@ -115,6 +115,10 @@ export class ChromeInstance {
             // 네트워크 요청 데이터 추출
             const networkRequests = result.lhr.audits?.['network-requests']?.details?.items || [];
             
+            if (!networkRequests.length) { 
+                throw new Error('네트워크 요청 데이터 없음');
+            }
+            
             // 리소스 타입별 요약 데이터 생성
             const resourceSummary = networkRequests.reduce((acc: any[], request: NetworkRequest) => {
                 const existingType = acc.find(item => item.resourceType === request.resourceType);

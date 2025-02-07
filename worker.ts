@@ -26,6 +26,7 @@ parentPort.on('message', async (message: WorkerMessage) => {
         console.log(`워커 ${workerId}: URL 분석 시작 - ${message.url}`);
         const lighthouseResult = await chromeInstance.runLighthouse(message.url);
 
+        // 성공한 경우에만 데이터 전송
         parentPort?.postMessage({
             status: 'success',
             url: message.url,
@@ -35,11 +36,18 @@ parentPort.on('message', async (message: WorkerMessage) => {
 
     } catch (error) {
         console.error(`워커 ${workerId} 오류:`, error);
+        // 에러가 발생한 경우 error 상태로 메시지 전송
         parentPort?.postMessage({
             status: 'error',
             url: message.url,
             error: error instanceof Error ? error.message : String(error)
         });
+
+        // Chrome 인스턴스 재생성을 위해 현재 인스턴스 정리
+        if (chromeInstance) {
+            await chromeInstance.close();
+            chromeInstance = null;
+        }
     }
 });
 
