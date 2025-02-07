@@ -7,27 +7,28 @@ interface WorkerMessage {
 }
 
 if (!parentPort) {
-    throw new Error('이 스크립트는 워커 스레드로만 실행할 수 있습니다.');
+    throw new Error('this script can only be run as a worker thread.');
 }
 
 const workerId = workerData.workerId;
-console.log(`워커 ${workerId} 시작`);
+console.log(`Worker ${workerId} Start`);
 
 let chromeInstance: ChromeInstance | null = null;
 
+// 메인 스레드(index.ts)로 부터 메시지를 받으면 실행되는 이벤트 리스너
 parentPort.on('message', async (message: WorkerMessage) => {
     try {
         if (!chromeInstance) {
-            console.log(`워커 ${workerId}: Chrome 인스턴스 초기화 중...`);
+            console.log(`Worker ${workerId}: Chrome instance initialization...`);
             chromeInstance = new ChromeInstance();
             await chromeInstance.initialize();
         }
 
-        console.log(`워커 ${workerId}: URL 분석 시작 - ${message.url}`);
+        console.log(`Worker ${workerId}: URL Analysis Started - ${message.url}`);
         const lighthouseResult = await chromeInstance.runLighthouse(message.url);
 
         // 성공한 경우에만 데이터 전송
-        parentPort?.postMessage({
+        parentPort?.postMessage({ // postMessage() is worker send result to main thread
             status: 'success',
             url: message.url,
             data: lighthouseResult,
@@ -52,8 +53,9 @@ parentPort.on('message', async (message: WorkerMessage) => {
 });
 
 process.on('SIGINT', async () => {
-    console.log(`\n워커 ${workerId} 종료 신호 감지`);
+    console.log(`\nWorker ${workerId} Stop`);
     if (chromeInstance) {
+        console.log('Chrome 인스턴스 종료(Chrome Instance closing)');
         await chromeInstance.close();
     }
     process.exit(0);

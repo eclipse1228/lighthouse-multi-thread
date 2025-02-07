@@ -115,42 +115,52 @@ async function main() {
                     ((Date.now() - workerStatus.startTime) / 1000).toFixed(2) : 'N/A';
 
                 if (message.status === 'success' && message.data && message.institution) {
-                    try {
-                        console.log(`데이터 저장 시작: ${message.url}`);
-                        
-                        // lighthouse_resource 컬렉션에 저장
-                        await resourceCollection.insertOne({
-                            url: message.url,
-                            network_request: message.data.networkRequests,
-                            ...message.institution,
-                            timestamp: new Date()
-                        });
-                        console.log('lighthouse_resource 데이터 저장 완료');
-
-                        // lighthouse_traffic 컬렉션에 저장
-                        await trafficCollection.insertOne({
-                            url: message.url,
-                            resource_summary: message.data.resourceSummary,
-                            ...message.institution,
-                            timestamp: new Date()
-                        });
-                        console.log('lighthouse_traffic 데이터 저장 완료');
-
-                        console.log(`작업 완료: ${message.url} (소요 시간: ${duration}초)`);
-                        processedCount++;
-                    } catch (error) {
-                        console.error(`MongoDB 저장 중 오류: ${message.url}`, error);
-                        // MongoDB 저장 실패 시 에러 로그에 기록
+                    // 네트워크 요청 데이터가 있는지 한 번 더 확인
+                    if (!message.data.networkRequests || message.data.networkRequests.length === 0) {
+                        console.error(`Network requests empty: ${message.url}`);
                         await errorCollection.insertOne({
                             url: message.url,
-                            error: error instanceof Error ? error.message : String(error),
-                            type: 'mongodb_error',
+                            error: 'Network requests empty',
+                            type: 'empty_network_requests',
                             timestamp: new Date()
                         });
+                    } 
+                    else {
+                        try {
+                            console.log(`데이터 저장 시작(Storing data): ${message.url}`);
+                            
+                            // lighthouse_resource 컬렉션에 저장
+                            await resourceCollection.insertOne({
+                                url: message.url,
+                                network_request: message.data.networkRequests,
+                                ...message.institution,
+                                timestamp: new Date()
+                            });
+                            console.log('lighthouse_resource 데이터 저장 완료(Storing data complete)');
+
+                            // lighthouse_traffic 컬렉션에 저장
+                            await trafficCollection.insertOne({
+                                url: message.url,
+                                resource_summary: message.data.resourceSummary,
+                                ...message.institution,
+                                timestamp: new Date()
+                            });
+                            console.log('lighthouse_traffic 데이터 저장 완료(Storing data complete)');
+
+                            console.log(`작업 완료(Execution completed): ${message.url} (소요 시간(Execution time): ${duration}초)`);
+                            processedCount++;
+                        } catch (error) {
+                            console.error(`MongoDB 저장 중 오류(Storing data error): ${message.url}`, error);
+                            await errorCollection.insertOne({
+                                url: message.url,
+                                error: error instanceof Error ? error.message : String(error),
+                                type: 'mongodb_error',
+                                timestamp: new Date()
+                            });
+                        }
                     }
                 } else if (message.status === 'error') {
-                    console.error(`작업 실패: ${message.url} (소요 시간: ${duration}초)`, message.error);
-                    // 실패한 URL을 에러 로그에 기록
+                    console.error(`작업 실패(Execution failed): ${message.url} (소요 시간(Execution time): ${duration}초)`, message.error);
                     await errorCollection.insertOne({
                         url: message.url,
                         error: message.error,
