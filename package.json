@@ -10,8 +10,9 @@
   },
   "dependencies": {
     "@types/node": "^20.0.0",
+    "chrome-launcher": "^1.1.2",
     "lighthouse": "^12.3.0",
-    "mongodb": "^6.0.0",
+    "mongodb": "^6.13.0",
     "puppeteer": "^24.2.0",
     "ts-node": "^10.9.1",
     "typescript": "^5.0.0"
