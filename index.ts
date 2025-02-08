@@ -13,7 +13,7 @@ const MONGO_URI = 'mongodb://localhost:27017';
 const DB_NAME = 'eco-web';
 
 // CPU 코어 수에 기반한 워커 수 설정
-const NUM_WORKERS = os.cpus().length - 4; // 현재 12개 
+const NUM_WORKERS = os.cpus().length; // 현재 16개 
 console.log('사용 가능한 CPU 코어:', os.cpus().length);
 console.log('설정된 워커 수:', NUM_WORKERS);
 
@@ -85,7 +85,7 @@ async function main() {
         // 워커 생성
         const workers: WorkerStatus[] = [];
         let processedCount = 0;
-        const TEST_LIMIT = 50000;
+        const TEST_LIMIT = 90000;
         
         for (let i = 0; i < NUM_WORKERS; i++) {
             console.log(`워커 ${i} 생성 중...`);

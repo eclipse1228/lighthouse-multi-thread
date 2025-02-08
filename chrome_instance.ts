@@ -62,7 +62,7 @@ export class ChromeInstance {
             `--user-data-dir=${this.tempDir}` // 임시 디렉토리 사용
         ];
 
-        // Windows 환경의 Chrome 경로
+        // Windows 환경의 Chrome 경로 , Linux 환경의 Chrome 경로 설정
         const chromePath = process.platform === 'win32'
             ? 'C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe'
             : '/usr/bin/google-chrome';

@@ -5,9 +5,15 @@ Google Lighthouse를 통해 많은 url을 병렬처리를 통해 빠르게 데�
 # 설계
 0. Chrome headless Browser
 - chrome brower 다운로드 필요
--- window(default), Linux 따로 설정 필요. linux는 /chrome/google-chrome-stable..deb 파일 사용
+-- window(default) , Docker 환경
 
-1. 컨테이너화 (Docker) (미완료)
+1. 컨테이너화 (Docker)
+# Docker
+```
+docker build -t ecoweb-crawler .
+
+docker run -it --name ecoweb-crawler -p 27017:27017 ecoweb-crawler
+```
 
 2. 병렬 처리 (Thread) (완료)
 - 워커 쓰레드 CPU 코어 수 기반 동적 워커 생성
@@ -69,4 +75,8 @@ siteName:
 siteType:
 siteLink:
 
+- lighthouse_unsued의 구조 ()
+
+- lighthouse_error의 구조 ()
+---
 

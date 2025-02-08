@@ -39,15 +39,15 @@ export class UrlManager {
             const allUrls: Institution[] = JSON.parse(url_data);
             console.log(`전체 URL 수: ${allUrls.length}개`);
             
-            // 중앙행정기관 필터링
-            const centralGovUrls = allUrls.filter(url => url.institutionType === '중앙행정기관');
-            console.log(`중앙행정기관 URL 수: ${centralGovUrls.length}개`);
+            // 기관 필터링
+            const filteredUrls = allUrls.filter(url => url.institutionType === '지방자치단체');
+            console.log(`지방자치단체 URL 수: ${filteredUrls.length}개`);
             
             // URL 유효성 검사
             this.urls = [];
             this.invalidUrls = [];
             
-            for (const institution of centralGovUrls) {
+            for (const institution of filteredUrls) {
                 console.log(`URL 검사 중: ${institution.siteLink} (${institution.siteName})`);
                 
                 if (this.isValidUrl(institution.siteLink)) {
