@@ -47,11 +47,11 @@ export class ChromeInstance {
     constructor() {
         // Lighthouse 임시 파일을 저장할 디렉토리 설정
         this.tempDir = join(tmpdir(), `lighthouse-${process.pid}`);
-        console.log('Lighthouse 임시 디렉토리(Temp Directory):', this.tempDir);
+        // console.log('Lighthouse 임시 디렉토리(Temp Directory):', this.tempDir);
     }
 
     async initialize() {
-        console.log('Chrome 인스턴스 초기화 시작(Chrome Instance initialization)');
+        // console.log('Chrome 인스턴스 초기화 시작(Chrome Instance initialization)');
         
         const chromeFlags = [
             '--headless',
@@ -67,19 +67,19 @@ export class ChromeInstance {
             ? 'C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe'
             : '/usr/bin/google-chrome';
 
-        console.log('Chrome 경로(Chrome path):', chromePath);
+        // console.log('Chrome 경로(Chrome path):', chromePath);
         
         const options = {
             chromeFlags: chromeFlags,
             chromePath: chromePath
         };
 
-        console.log('Chrome 실행 옵션:', options);
+        // console.log('Chrome 실행 옵션:', options);
 
         try {
             this.chrome = await chromeLauncher.launch(options);
-            console.log('Chrome 인스턴스 성공적으로 시작됨(Chrome Instance started successfully)');
-            console.log('Chrome 포트(Chrome port):', this.chrome.port);
+            // console.log('Chrome 인스턴스 성공적으로 시작됨(Chrome Instance started successfully)');
+            // console.log('Chrome 포트(Chrome port):', this.chrome.port);
         } catch (error: unknown) {
             console.error('Chrome 인스턴스 시작 중 오류(Chrome Instance failed to start):', error);
             throw error;
@@ -96,7 +96,7 @@ export class ChromeInstance {
         const options = {
             port: this.chrome.port, // Chrome 인스턴스의 port 직접 사용
             output: 'json',
-            logLevel: 'info', // 'verbose' -> 'silent'로 변경하여 로그 비활성화
+            logLevel: 'silent', // 'verbose' -> 'silent'로 변경하여 로그 비활성화 , info
             chromeFlags: [
                 '--headless',
                 '--disable-gpu',
@@ -141,7 +141,7 @@ export class ChromeInstance {
             ]
         };
 
-        console.log('Lighthouse 옵션:', options);
+        // console.log('Lighthouse 옵션:', options);
 
         try {
             const runnerResult = await lighthouse(url, options);
@@ -218,17 +218,17 @@ export class ChromeInstance {
     }
 
     async close() {
-        console.log('리소스 정리 시작(Start Resource Summary)...');
+        // console.log('리소스 정리 시작(Start Resource Summary)...');
         
         if (this.chrome) {
-            console.log('Chrome 인스턴스 종료 중(Killing Chrome Instance)...');
+            // console.log('Chrome 인스턴스 종료 중(Killing Chrome Instance)...');
             await this.chrome.kill();
-            console.log('Chrome 인스턴스 종료 완료(Chrome Instance Closed)');
+            // console.log('Chrome 인스턴스 종료 완료(Chrome Instance Closed)');
         }
 
         try {
             await rm(this.tempDir, { recursive: true, force: true });
-            console.log('임시 파일 정리 완료(Cleaning Temp Files Completed)');
+            // console.log('임시 파일 정리 완료(Cleaning Temp Files Completed)');
         } catch (error: unknown) {
             console.warn('임시 파일 정리 중 오류(Cleaning Temp Files Error):', error);
         }

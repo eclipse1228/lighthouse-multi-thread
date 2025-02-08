@@ -37,13 +37,13 @@ let unusedCollection: Collection;
 let client: MongoClient;
 
 async function cleanup() {
-    console.log('프로그램 종료 및 리소스 정리 시작...');
+    // console.log('프로그램 종료 및 리소스 정리 시작...');
     
     // MongoDB 연결 종료
     if (client) {
-        console.log('MongoDB 연결 종료 중...');
+        // console.log('MongoDB 연결 종료 중...');
         await client.close();
-        console.log('MongoDB 연결 종료 완료');
+        // console.log('MongoDB 연결 종료 완료');
     }
 }
 
@@ -124,7 +124,7 @@ async function main() {
                     } 
                     else {
                         try {
-                            console.log(`데이터 저장 시작(Storing data): ${message.url}`);
+                            // console.log(`데이터 저장 시작(Storing data): ${message.url}`);
                             
                             // lighthouse_resource 컬렉션에 저장
                             await resourceCollection.insertOne({
@@ -142,7 +142,7 @@ async function main() {
                                 ...message.institution,
                                 timestamp: new Date()
                             });
-                            console.log('lighthouse_traffic 데이터 저장 완료(Storing data complete)');
+                            // console.log('lighthouse_traffic 데이터 저장 완료(Storing data complete)');
                             
                             // lighthouse_unused 데이터 저장
                             await unusedCollection.insertOne({
@@ -151,7 +151,7 @@ async function main() {
                                 timestamp: new Date(),
                                 ...message.institution
                             });
-                            console.log(`작업 완료(Execution completed): ${message.url} (소요 시간(Execution time): ${duration}초)`);
+                            // console.log(`작업 완료(Execution completed): ${message.url} (소요 시간(Execution time): ${duration}초)`);
                             processedCount++;
                         } catch (error) {
                             console.error(`MongoDB 저장 중 오류(Storing data error): ${message.url}`, error);
@@ -251,11 +251,11 @@ async function main() {
         // 메모리 사용량 모니터링
         setInterval(() => {
             const used = process.memoryUsage();
-            console.log('메모리 사용량:', {
-                heapUsed: `${Math.round(used.heapUsed / 1024 / 1024)}MB`,
-                heapTotal: `${Math.round(used.heapTotal / 1024 / 1024)}MB`,
-                external: `${Math.round(used.external / 1024 / 1024)}MB`
-            });
+            // console.log('메모리 사용량:', {
+            //     heapUsed: `${Math.round(used.heapUsed / 1024 / 1024)}MB`,
+            //     heapTotal: `${Math.round(used.heapTotal / 1024 / 1024)}MB`,
+            //     external: `${Math.round(used.external / 1024 / 1024)}MB`
+            // });
         }, 30000);
 
     } catch (error) {

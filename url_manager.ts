@@ -40,8 +40,8 @@ export class UrlManager {
             console.log(`전체 URL 수: ${allUrls.length}개`);
             
             // 기관 필터링
-            const filteredUrls = allUrls.filter(url => url.institutionType === '지방자치단체');
-            console.log(`지방자치단체 URL 수: ${filteredUrls.length}개`);
+            const filteredUrls = allUrls.filter(url => url.institutionType === '공공기관');
+            console.log(`공공기관 URL 수: ${filteredUrls.length}개`);
             
             // URL 유효성 검사
             this.urls = [];
