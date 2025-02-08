@@ -295,12 +295,41 @@
   - Chrome 경로 직접 지정 (/usr/bin/google-chrome)
   - 상세한 로깅 추가
 
+
+### Docker 파일 작성 (02-07)
+
 ## 다음 단계
 
-0. 컨테이너화 구현(Docker)
+## TO_DO
+
+- CPU Core 만큼 워커를 실행하는데, 리소스 부족 문제가 발생함. 
+- 각 url 마다 새로운 chrome 인스턴스를 생성하는 대신 crhome 인스턴스를 재사용하는 방식으로 변경해야함.
+- Docker 컨테이너에서 한글이 깨짐 -> 한글 json { url.institutionType === '지방자치단체' 부분이 깨질 수 있음.} -> utf-8로 명시했기 때문에, 올바르게 처리됨. (js 문자열 비교는 내부적으로 유니코드 값을 사용해서 한글도 비교됨.)
+- chrome instance가 init이 안 되는 경우 발생
+-- Docker 컨테이너 리소스 제한을 확인하고 조정해야함. 
+```
+docker run -it --shm-size=2g \ 
+-- memory = 4g \ 
+-- cpus=2 \
+your-image-name
+```
+
+```
+const chromeFlags = [
+  '--headless',
+  '--no-sandbox',
+  '--disable-setuid-sandbox',
+  '--disable-dev-shm-usage',
+  '--disable-gpu',
+  '--single-process', // 단일 프로세스 모드
+  '--no-zygote',     // Zygote 프로세스 비활성화
+  '--disable-extensions', // 확장 프로그램 비활성화
+  '--disable-background-networking' // 백그라운드 네트워킹 비활성화
+];
+```
 
 
-## 남은 것 
+
 
 1. 성능 최적화
 2. 테스트 커버리지 확대
